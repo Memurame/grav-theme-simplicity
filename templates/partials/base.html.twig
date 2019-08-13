@@ -1,0 +1,54 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'de' }}">
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            {% include 'partials/metadata.html.twig' %}
+            <link rel="shortcut icon" href="/favicon.ico">
+            <link rel="icon" type="image/png" href="{{ url('theme://favicon.png') }}" sizes="32X32" />
+            <link rel="apple-touch-icon" href="{{ url('theme://favicon.png') }}">
+            <link rel="canonical" href="{{ page.url(true, true) }}" />
+            <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+            {% block stylesheets %}
+                {% do assets.addCss('theme://build/css/simplicity.min.css', 1) %}
+            {% endblock %}
+            {{ assets.css() }}
+        {% endblock head %}
+
+    </head>
+    <body class="{{ page.header.body_classes }}">
+        <div class="wrapper">
+            {% block header %}
+                {% include 'partials/header.html.twig' %}
+            {% endblock %}
+
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <aside>
+            {% block aside %}{% endblock %}
+        </aside>
+
+
+        {% block footer %}
+            {%  include 'partials/footer.html.twig' %}
+        {% endblock %}
+    </div>
+
+
+
+
+
+        {% block javascripts %}
+            {% do assets.addJs('theme://build/js/simplicity.core.min.js',100) %}
+            {% do assets.addJs('theme://build/js/simplicity.app.min.js',80) %}
+        {% endblock %}
+        {{ assets.js() }}
+    </body>
+</html>

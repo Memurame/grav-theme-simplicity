@@ -1,0 +1,52 @@
+{
+  "name": "simplicity",
+  "version": "0.1.0",
+  "description": "Simples Portfolio um deine Erfahrungen mit der Welt zu teilen.",
+  "main": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Memurame/grav-theme-simplicity.git"
+  },
+  "author": "Tom Hirter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Memurame/grav-theme-simplicity/issues"
+  },
+  "homepage": "https://github.com/Memurame/grav-theme-simplicity#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gulp": "^4.0.2",
+    "jquery": "^3.3.1",
+    "sweetalert2": "^8.8.7",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "del": "^3.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-header": "^2.0.5",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.1",
+    "vinyl-named": "^1.1.0",
+    "vue-loader": "^15.7.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.20.2",
+    "webpack-stream": "^4.0.3"
+  }
+}
