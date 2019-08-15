@@ -8,5 +8,74 @@ author:
 homepage: https://github.com/Memurame/grav-theme-simplicity
 bugs: https://github.com/Memurame/grav-theme-simplicity/issues
 license: MIT
+form:
+  validation: loose
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      class: subtle
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            pers:
+              type: section
+              title: "Person"
+              underline: true
+              fields:
+                header.name:
+                  type: text
+                  label: "Dein Name"
+                  validate:
+                    required: true
+                header.subtitle:
+                  type: text
+                  label: "Dein Beruf"
+                  validate:
+                    required: true
+                header.image:
+                  type: file
+                  label: "Profilbild"
+                  destination: 'user/themes/simplicity/images/custom'
+            social:
+              type: section
+              title: "Socialmedia"
+              underline: true
+              fields:
+                header.social.facebook:
+                  type: text
+                  label: "Facebook"
+                  toggleable: true
+                  placeholder: "https://facebook.com/hans.mueller"
+                header.social.twitter:
+                  type: text
+                  label: "Twitter"
+                  toggleable: true
+                  placeholder: "https://facebook.com/hans.mueller"
+                header.social.linkedin:
+                  type: text
+                  label: "Linkedin"
+                  toggleable: true
+                  placeholder: "https://facebook.com/hans.mueller"
+                header.social.github:
+                  type: text
+                  label: "Github"
+                  toggleable: true
+                  placeholder: "https://facebook.com/hans.mueller"
+                header.social.google:
+                  type: text
+                  label: "Google+"
+                  toggleable: true
+                  placeholder: "https://facebook.com/hans.mueller"
+            contact:
+              type: section
+              title: "Kontakt"
+              underline: true
+              text: "Angabe der E-Mail Adresse welche aufgerufen wird wenn der User auf den Button Kontaktieren klickt"
+
+
+
 
 

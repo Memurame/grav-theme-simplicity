@@ -1,0 +1,50 @@
+title: project_item
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: Name
+            preview:
+              type: section
+              title: "Vorschau"
+              underline: true
+              fields:
+                header.preview.image:
+                  type: file
+                  label: "Bild"
+                  destination: '@self/preview'
+                header.preview.text:
+                  type: textarea
+                  rows: 6
+                  label: "Kurze Einleitung"
+                  validate:
+                    required: true
+            details:
+              type: section
+              title: "Detail Beschreibung"
+              underline: true
+              fields:
+                header.detail.text:
+                  type: markdown
+                  rows: 6
+                  label: "Beschreibung"
+                  validate:
+                    required: true
+                    type: textarea
+                header.gallerie:
+                  type: pagemedia
+                  label: "Gallerie"
+
+
+

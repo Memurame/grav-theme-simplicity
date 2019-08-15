@@ -1,0 +1,49 @@
+title: projects
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: "Titel"
+            header.pos:
+              type: toggle
+              label: "Position des Inhalts"
+              highlight: 0
+              default: 0
+              disabled: true
+              description: "Diese Einstellung ist hier deaktiviert"
+              options:
+                0: "Main"
+                1: "Sidebar"
+              validate:
+                type: bool
+            header.reference:
+              type: pages
+              size: medium
+              classes: fancy
+              label: Projekt Seite auswählen
+              show_all: false
+              show_modular: false
+              show_root: false
+              validate:
+                required: true
+            header.count:
+              type: select
+              label: "Anzahl"
+              size: medium
+              options:
+                2: "Die 2 letzten Projekte"
+                5: "Die 5 letzten Projekte"
+                10: "Die 10 letzten Projekte"
+              validate:
+                required: true

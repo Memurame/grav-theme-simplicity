@@ -1,7 +1,21 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block content %}
-  <article>
-    {{ page.content }}
-  </article>
+{% block main %}
+
+  {% for module in page.collection() %}
+      {% if module.header.pos == 0 %}
+        {{ module.content }}
+      {% endif %}
+  {% endfor %}
+
+{% endblock %}
+
+{% block aside %}
+
+    {% for module in page.collection() %}
+        {% if module.header.pos == 1 %}
+            {{ module.content }}
+        {% endif %}
+    {% endfor %}
+
 {% endblock %}

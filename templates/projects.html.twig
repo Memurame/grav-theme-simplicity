@@ -1,0 +1,28 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+  <section class="page page-projects">
+      <h2 class="heading">{{ page.header.title }}</h2>
+      <article class="project-list">
+          {% for item in page.children() %}
+
+              <article class="project-item">
+                  <div class="item-image">
+                      {% set preview_image = item.header.preview.image | first %}
+                      <img src="{{ preview_image.path }}">
+                  </div>
+                  <div class="item-desc">
+                      <strong class="title">{{ item.header.title }}</strong>
+                      <p>{{ item.header.preview.text }}</p>
+                      <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> zum Projekt</a>
+                  </div>
+              </article>
+
+
+          {% endfor %}
+      </article>
+  </section>
+
+{% endblock %}
+

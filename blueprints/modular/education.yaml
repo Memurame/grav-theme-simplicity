@@ -1,0 +1,48 @@
+title: education
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: "Titel"
+            header.pos:
+              type: toggle
+              label: "Position des Inhalts"
+              highlight: 0
+              default: 0
+              options:
+                0: "Main"
+                1: "Sidebar"
+              validate:
+                type: bool
+            header.education:
+              type: list
+              label: "Ausbildungen"
+              fields:
+                .name:
+                  type: text
+                  label: "Bezeichnung"
+                  validate:
+                    required: true
+                .school:
+                  type: text
+                  label: "Schule"
+                  validate:
+                    required: true
+                .date:
+                  type: text
+                  label: "Ausbildungsdauer"
+                  markdown: true
+                  description: "Beispiel: `2018-2019`"
+                  validate:
+                    required: true

@@ -54,5 +54,19 @@
 @import "core/fontawesome/solid.scss";
 @import "core/fontawesome/regular.scss";
 
+@import "lightgallery_variables";
+@import "lightgallery/lg-variables";
+@import "lightgallery/lg-mixins";
+@import "lightgallery/lg-fonts";
+@import "lightgallery/lg-theme-default";
+@import "lightgallery/lg-thumbnail";
+@import "lightgallery/lg-video";
+@import "lightgallery/lg-autoplay";
+@import "lightgallery/lg-zoom";
+@import "lightgallery/lg-pager";
+@import "lightgallery/lg-fullscreen";
+@import "lightgallery/lg-share";
+@import "lightgallery/lg-core";
+
 @import "custom.scss";
 

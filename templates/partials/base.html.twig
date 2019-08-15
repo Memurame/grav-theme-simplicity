@@ -21,26 +21,30 @@
         {% endblock head %}
 
     </head>
-    <body class="{{ page.header.body_classes }}">
-        <div class="wrapper">
-            {% block header %}
-                {% include 'partials/header.html.twig' %}
-            {% endblock %}
+    <body>
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
 
-
-        <main>
-            {% block content %}{% endblock %}
-        </main>
-        <aside>
-            {% block aside %}{% endblock %}
-        </aside>
-
-
+        <div class="content-wrapper container">
+            <div class="row">
+                {% if page.home() %}
+                    <main class="col-md-8 col-sm-12 col-xs-12">
+                        {% block main %}{% endblock %}
+                    </main>
+                    <aside class="col-md-4 col-sm-12 col-xs-12">
+                        {% block aside %}{% endblock %}
+                    </aside>
+                {% else %}
+                <main class="col-12">
+                    {% block content %}{% endblock %}
+                </main>
+                {% endif %}
+            </div>
+        </div>
         {% block footer %}
             {%  include 'partials/footer.html.twig' %}
         {% endblock %}
-    </div>
-
 
 
 

@@ -1,0 +1,12 @@
+<section class="modular modular-experience">
+    <h2 class="heading">{{ page.header.title }}</h2>
+    <article class="content">
+        {% for exp in page.header.experience %}
+            <div>
+                <strong class="title">{{ exp.job }}</strong> - <span class="subtitle">{{ exp.company }} <small>({{ exp.date }})</small></span>
+                <p>{{ exp.text }}</p>
+            </div>
+        {% endfor %}
+    </article>
+
+</section>

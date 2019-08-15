@@ -76,7 +76,8 @@ const files = {
     core: [
       path.src.core.js + 'jquery.min.js',
       path.src.core.js + 'sweetalert2.all.min.js',
-      path.src.core.js + 'bootstrap.bundle.min.js'
+      path.src.core.js + 'bootstrap.bundle.min.js',
+      path.src.core.js + 'lightgallery.js'
     ]
   },
   scss: {
@@ -102,6 +103,11 @@ const dependencies = {
       base: path.src.core.scss + 'fontawesome/',
       src: 'node_modules/@fortawesome/fontawesome-free/scss/**/*',
       dest: path.src.core.scss + 'fontawesome/'
+    },
+    lightgallery: {
+      base: path.src.core.scss + 'lightgallery/',
+      src: 'node_modules/lightgallery/src/sass/**/*',
+      dest: path.src.core.scss + 'lightgallery/'
     }
   },
   fonts: {
@@ -109,6 +115,11 @@ const dependencies = {
       base: path.src.fonts + 'fontawesome/',
       src: 'node_modules/@fortawesome/fontawesome-free/webfonts/**/*',
       dest: path.src.fonts + 'fontawesome/'
+    },
+    lightgallery: {
+      base: path.src.fonts + 'lightgallery/',
+      src: 'node_modules/lightgallery/dist/fonts/*',
+      dest: path.src.fonts + 'lightgallery/'
     }
   },
   js : {
@@ -127,7 +138,13 @@ const dependencies = {
       base: path.src.core.js + 'sweetalert2.all.min.js',
       src: 'node_modules/sweetalert2/dist/sweetalert2.all.min.js',
       dest: path.src.core.js
+    },
+    lightgallery: {
+      base: path.src.core.js + '/lightgallery.js',
+      src: 'node_modules/lightgallery/dist/js/lightgallery.js',
+      dest: path.src.core.js
     }
+
   }
 };
 

@@ -1,0 +1,17 @@
+<section class="modular modular-skills">
+    <div class="intro">
+        <h2 class="heading">{{ page.header.title }}</h2>
+        <p>{{ page.header.text }}</p>
+    </div>
+    <article class="content">
+        {% for skill in page.header.skills %}
+            <div>
+                <strong>{{ skill.name }}</strong>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ skill.level }}%" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </article>
+
+</section>

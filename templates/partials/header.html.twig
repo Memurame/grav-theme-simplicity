@@ -1,0 +1,33 @@
+<header class="site-header">
+    <div class="header-container container">
+        <div class="header-profileimage">
+            {% set image = theme_config.header.image | first %}
+            <div style="background-image: url('{{ theme_url }}/images/custom/{{ image.name }}')"></div>
+        </div>
+        <div class="header-info">
+            <h1 class="name">{{ theme_config.header.name }}</h1>
+            <h2 class="desc">{{ theme_config.header.subtitle }}</h2>
+            <div class="header-social">
+                <ul>
+                    {% if  theme_config.header.social.twitter %}
+                        <li><a href="{{ theme_config.header.social.twitter }}"><i class="fab fa-twitter"></i></a></li>
+                    {% endif %}
+                    {% if  theme_config.header.social.google %}
+                        <li><a href="{{ theme_config.header.social.google }}"><i class="fab fa-google-plus-g"></i></a></li>
+                    {% endif %}
+                    {% if  theme_config.header.social.linkedin %}
+                        <li><a href="{{ theme_config.header.social.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+                    {% endif %}
+                    {% if  theme_config.header.social.github %}
+                        <li><a href="{{ theme_config.header.social.github }}"><i class="fab fa-github-alt"></i></a></li>
+                    {% endif %}
+                    {% if  theme_config.header.social.facebook %}
+                        <li><a href="{{ theme_config.header.social.facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                    {% endif %}
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>

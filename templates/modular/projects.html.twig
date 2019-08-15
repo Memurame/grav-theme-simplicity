@@ -1,0 +1,24 @@
+{% set projectpage = page.find(page.header.reference) %}
+
+
+<section class="modular modular-projects">
+    <h2 class="heading">{{ page.header.title }}</h2>
+    <article class="project-list widget">
+        {% for item in projectpage.children() %}
+            <article class="project-item">
+                <div class="item-image">
+                    {% set preview_image = item.header.preview.image | first %}
+                   <img src="{{ preview_image.path }}">
+                </div>
+                <div class="item-desc">
+                    <strong class="title">{{ item.header.title }}</strong>
+                    <p>{{ item.header.preview.text }}</p>
+                    <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> zum Projekt</a>
+                </div>
+            </article>
+
+
+        {% endfor %}
+    </article>
+    <a href="{{ base_url_absolute }}/{{ page.header.reference[1:] }}" class="btn btn-block"><i class="fas fa-external-link-alt"></i> Weitere Projekte</a>
+</section>

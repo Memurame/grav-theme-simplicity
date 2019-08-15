@@ -1,0 +1,18 @@
+title: projects
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: Name
+

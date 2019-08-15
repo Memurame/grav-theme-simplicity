@@ -1,0 +1,12 @@
+<section class="modular modular-education">
+    <h2 class="heading">{{ page.header.title }}</h2>
+    <article class="content">
+        {% for edu in page.header.education %}
+            <div>
+                <i class="fas fa-graduation-cap"></i> <strong>{{ edu.name }}</strong>
+                <span class="desc">{{ edu.school }} <small>({{ edu.date }})</small></span>
+            </div>
+        {% endfor %}
+    </article>
+
+</section>

@@ -1,0 +1,30 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+  <section class="page page-project">
+      <h2 class="heading">{{ page.header.title }}</h2>
+      <article class="project-detail">
+          <article class="detail-preview">
+              <div class="preview-image">
+                  {% set preview_image = page.header.preview.image | first %}
+                  <img src="{{ base_url_absolute }}/{{ preview_image.path }}" alt="Vorschau Bild">
+              </div>
+              <div class="preview-desc">
+                  <p>{{ page.header.preview.text }}</p>
+              </div>
+          </article>
+          <article class="detail-detail">
+              {{ page.header.detail.text  | markdown}}
+          </article>
+          <article class="detail-gallerie">
+              {% for img in page.header.gallerie | split(',')%}
+                  <article style="background-image: url('{{ page.media[img].cropZoom(400,400).url }}')" data-src="{{ page.media[img].cropZoom(1280,720).url }}"></article>
+              {% endfor %}
+
+          </article>
+      </article>
+  </section>
+
+{% endblock %}
+

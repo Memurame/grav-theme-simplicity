@@ -1,0 +1,54 @@
+title: experience
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        inhalt:
+          type: tab
+          title: Inhalt
+          fields:
+            header.title:
+              type: text
+              autofocus: true
+              label: "Titel"
+            header.pos:
+              type: toggle
+              label: "Position des Inhalts"
+              highlight: 0
+              default: 0
+              options:
+                0: "Main"
+                1: "Sidebar"
+              validate:
+                type: bool
+            header.experience:
+              type: list
+              label: "Erfahrungen"
+              fields:
+                .job:
+                  type: text
+                  label: "Job"
+                  validate:
+                    required: true
+                .company:
+                  type: text
+                  label: "Firma"
+                  validate:
+                    required: true
+                .date:
+                  type: text
+                  label: "Anstellungs Dauer"
+                  markdown: true
+                  description: "Beispiel: `2018-2019`"
+                  validate:
+                    required: true
+                .text:
+                  type: textarea
+                  label: "Beschreibung"
+                  rows: 4
+                  validate:
+                    required: true
