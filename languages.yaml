@@ -1,0 +1,103 @@
+de:
+  THEME_SIMPLICITY:
+    CONFIG:
+      FIELDS:
+        SECTION:
+          PERSON:
+            LABEL: "Person"
+            FIELDS:
+              NAME:
+                LABEL: "Dein Name"
+              SUBTITLE:
+                LABEL: "Dein Beruf"
+              IMAGE:
+                LABEL: "Profilbild"
+          SOCIAL:
+            LABEL: "Socialmedia"
+    GLOBAL:
+      TABS:
+        1: "Inhalt"
+      FIELDS:
+        TITLE:
+          LABEL: "Titel"
+        POSITION:
+          LABEL: "Position des Inhalts"
+          OPTIONS:
+            MAIN: "Main"
+            SIDEBAR: "Sidebar"
+          DESCRIPTION: "Diese Einstellung ist hier deaktiviert"
+    MODULAR:
+      EDUCATION:
+        FIELDS:
+          EDUCATION:
+            LABEL: "Ausbildungen"
+            FIELDS:
+              NAME:
+                LABEL: "Bezeichnung"
+              SCHOOL:
+                LABEL: "Schule"
+              DATE:
+                LABEL: "Ausbildungsdauer"
+                DESCRIPTION: "Beispiel: `2018-2019`"
+      EXPERIENCE:
+        FIELDS:
+          EXPERIENCE:
+            LABEL: "Erfahrungen"
+            FIELDS:
+              JOB:
+                LABEL: "Job"
+              COMPANY:
+                LABEL: "Firma"
+              DATE:
+                LABEL: "Anstellungs Dauer"
+                DESCRIPTION: "Beispiel: `2018-2019`"
+              TEXT:
+                LABEL: "Beschreibung"
+      PROJECTS:
+        FIELDS:
+          REFERENCE:
+            LABEL: "Projekt Seite auswählen"
+          COUNT:
+            LABEL: "Anzahl"
+            OPTIONS:
+              2: "Die 2 letzten Projekte"
+              5: "Die 5 letzten Projekte"
+              10: "Die 10 letzten Projekte"
+      SKILLS:
+        FIELDS:
+          TEXT:
+            LABEL: "Kurze Einleitung"
+          SKILLS:
+            LABEL: "Kenntnisse"
+            FIELDS:
+              NAME:
+                LABEL: "Bezeichnung"
+              LEVEL:
+                LABEL: "Level"
+      TEXT:
+        FIELDS:
+          TEXT:
+            LABEL: "Text"
+    PAGES:
+      PROJECTITEM:
+        FIELDS:
+          SECTION:
+            VORSCHAU:
+              LABEL: "Vorschau"
+              FIELDS:
+                IMAGE:
+                  LABEL: "Bild"
+                TEXT:
+                  LABEL: "Kurze Einleitung"
+            DETAIL:
+              LABEL: "Detail Beschreibung"
+              FIELDS:
+                TEXT:
+                  LABEL: "Beschreibung"
+                GALLERIE:
+                  LABEL: "Gallerie"
+
+
+
+
+

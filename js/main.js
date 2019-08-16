@@ -5,3 +5,5 @@ new Vue({
     el: '#bridges',
     render: h => h(Bridges)
 })
+
+$(".detail-gallerie").lightGallery();

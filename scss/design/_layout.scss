@@ -31,6 +31,11 @@ h2.heading{
   margin-bottom: 2rem;
 }
 
+.markdown{
+  p:last-child{
+    margin-bottom: 0;
+  }
+}
 
 .site-header{
   border-top: 8px solid $color4;
@@ -90,7 +95,7 @@ h2.heading{
       }
     }
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     height: auto;
     .header-container{
       flex-flow: column;
@@ -182,7 +187,7 @@ h2.heading{
     .project-detail{
       display: flex;
       flex-flow: column;
-      padding: 1rem 0;
+      padding-top: 1rem;
       border-top: 1px solid $color3;
       .detail-preview{
         display: flex;
@@ -195,6 +200,9 @@ h2.heading{
         }
         .preview-desc{
           padding-left: 1rem;
+          p{
+            margin-bottom: 0;
+          }
         }
       }
       .detail-detail{
@@ -208,6 +216,7 @@ h2.heading{
         position: relative;
         border-top: 1px solid $color3;
         padding-top: 1rem;
+        margin-top: 1rem;
         > article{
           cursor: pointer;
           height: 190px;
@@ -216,6 +225,13 @@ h2.heading{
           background-position: center center;
           border: 8px solid $color6;
 
+        }
+      }
+      @include media-breakpoint-down(md) {
+        .detail-gallerie{
+          > article{
+            height: 150px;
+          }
         }
       }
       @include media-breakpoint-down(sm) {
@@ -229,6 +245,18 @@ h2.heading{
           .preview-desc{
             padding: 0;
             margin-top: 1rem;
+          }
+        }
+        .detail-gallerie{
+          > article{
+            width: 50%;
+          }
+        }
+      }
+      @include media-breakpoint-down(xs) {
+        .detail-gallerie{
+          > article{
+            height: 130px;
           }
         }
       }

@@ -9,46 +9,44 @@ form:
       fields:
         inhalt:
           type: tab
-          title: Inhalt
+          title: THEME_SIMPLICITY.GLOBAL.TABS.1
           fields:
             header.title:
               type: text
               autofocus: true
-              label: "Titel"
-            header.pos:
+              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+            header.position:
               type: toggle
-              label: "Position des Inhalts"
-              highlight: 0
-              default: 0
+              label: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.LABEL
+              highlight: main
+              default: main
               options:
-                0: "Main"
-                1: "Sidebar"
-              validate:
-                type: bool
+                main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
+                sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
             header.experience:
               type: list
-              label: "Erfahrungen"
+              label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.LABEL
               fields:
                 .job:
                   type: text
-                  label: "Job"
+                  label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.JOB.LABEL
                   validate:
                     required: true
                 .company:
                   type: text
-                  label: "Firma"
+                  label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.COMPANY.LABEL
                   validate:
                     required: true
                 .date:
                   type: text
-                  label: "Anstellungs Dauer"
+                  label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.DATE.LABEL
                   markdown: true
-                  description: "Beispiel: `2018-2019`"
+                  description: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.DATE.DESCRIPTION
                   validate:
                     required: true
                 .text:
                   type: textarea
-                  label: "Beschreibung"
+                  label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.TEXT.LABEL
                   rows: 4
                   validate:
                     required: true

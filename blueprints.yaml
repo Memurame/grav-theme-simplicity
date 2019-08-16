@@ -1,13 +1,17 @@
 name: "Simplicity"
-version: 0.1.0
-description: "A simple portfolio design"
-icon: empire
+version: 0.0.8
+description: "A simple design with which you can make your own portfolio. Modular page layout and separate project overview and detail page"
+icon: id-card-o
+keywords: portfolio, modular, simple, project, responsive, theme, modern
 author:
   name: Tom Hirter
   email: github@hirter.dev
 homepage: https://github.com/Memurame/grav-theme-simplicity
 bugs: https://github.com/Memurame/grav-theme-simplicity/issues
 license: MIT
+demo: https://demo.hirter.dev/grav/simplicity
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
 form:
   validation: loose
   fields:
@@ -22,26 +26,26 @@ form:
           fields:
             pers:
               type: section
-              title: "Person"
+              title: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.LABEL
               underline: true
               fields:
                 header.name:
                   type: text
-                  label: "Dein Name"
+                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.NAME.LABEL
                   validate:
                     required: true
                 header.subtitle:
                   type: text
-                  label: "Dein Beruf"
+                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.SUBTITLE.LABEL
                   validate:
                     required: true
                 header.image:
                   type: file
-                  label: "Profilbild"
+                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.IMAGE.LABEL
                   destination: 'user/themes/simplicity/images/custom'
             social:
               type: section
-              title: "Socialmedia"
+              title: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.SOCIAL.LABEL
               underline: true
               fields:
                 header.social.facebook:
@@ -69,11 +73,6 @@ form:
                   label: "Google+"
                   toggleable: true
                   placeholder: "https://facebook.com/hans.mueller"
-            contact:
-              type: section
-              title: "Kontakt"
-              underline: true
-              text: "Angabe der E-Mail Adresse welche aufgerufen wird wenn der User auf den Button Kontaktieren klickt"
 
 
 

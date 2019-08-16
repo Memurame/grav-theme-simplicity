@@ -9,15 +9,15 @@ form:
       fields:
         inhalt:
           type: tab
-          title: Inhalt
+          title: THEME_SIMPLICITY.GLOBAL.TABS.1
           fields:
             header.title:
               type: text
               autofocus: true
-              label: Name
+              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
             modular:
               type: section
-              title: Modular
+              title: "Modular"
               underline: true
               fields:
                 header.content.items:

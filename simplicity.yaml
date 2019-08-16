@@ -1,1 +1,16 @@
 enabled: true
+header:
+  name: 'Hans Müller'
+  subtitle: Web-Entwickler
+  social:
+    github: 'https://github.com/mueller'
+    facebook: 'https://facebook.com'
+    twitter: 'https://twitter.com'
+    linkedin: 'https://linkedin.com'
+    google: 'https://google.com'
+  image:
+    user/themes/simplicity/images/custom/businessman-310819_640.png:
+      name: businessman-310819_640.png
+      type: image/png
+      size: 69163
+      path: user/themes/simplicity/images/custom/businessman-310819_640.png

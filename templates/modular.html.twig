@@ -3,7 +3,7 @@
 {% block main %}
 
   {% for module in page.collection() %}
-      {% if module.header.pos == 0 %}
+      {% if module.header.position == 'main' or module.template() == 'modular/projects' %}
         {{ module.content }}
       {% endif %}
   {% endfor %}
@@ -13,7 +13,7 @@
 {% block aside %}
 
     {% for module in page.collection() %}
-        {% if module.header.pos == 1 %}
+        {% if module.header.position == 'sidebar' %}
             {{ module.content }}
         {% endif %}
     {% endfor %}

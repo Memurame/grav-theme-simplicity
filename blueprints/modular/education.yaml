@@ -9,40 +9,38 @@ form:
       fields:
         inhalt:
           type: tab
-          title: Inhalt
+          title: THEME_SIMPLICITY.GLOBAL.TABS.1
           fields:
             header.title:
               type: text
               autofocus: true
-              label: "Titel"
-            header.pos:
+              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+            header.position:
               type: toggle
-              label: "Position des Inhalts"
-              highlight: 0
-              default: 0
+              label: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.LABEL
+              highlight: main
+              default: main
               options:
-                0: "Main"
-                1: "Sidebar"
-              validate:
-                type: bool
+                main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
+                sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
             header.education:
               type: list
-              label: "Ausbildungen"
+              label: THEME_SIMPLICITY.MODULAR.EDUCATION.FIELDS.EDUCATION.LABEL
               fields:
                 .name:
                   type: text
-                  label: "Bezeichnung"
+                  label: THEME_SIMPLICITY.MODULAR.EDUCATION.FIELDS.EDUCATION.FIELDS.NAME.LABEL
                   validate:
                     required: true
                 .school:
                   type: text
-                  label: "Schule"
+                  label: THEME_SIMPLICITY.MODULAR.EDUCATION.FIELDS.EDUCATION.FIELDS.SCHOOL.LABEL
                   validate:
                     required: true
                 .date:
                   type: text
-                  label: "Ausbildungsdauer"
+                  label: THEME_SIMPLICITY.MODULAR.EDUCATION.FIELDS.EDUCATION.FIELDS.DATE.LABEL
                   markdown: true
-                  description: "Beispiel: `2018-2019`"
+                  description: THEME_SIMPLICITY.MODULAR.EDUCATION.FIELDS.EDUCATION.FIELDS.DATE.DESCRIPTION
                   validate:
                     required: true

@@ -14,15 +14,17 @@
                   <p>{{ page.header.preview.text }}</p>
               </div>
           </article>
-          <article class="detail-detail">
+          <article class="detail-detail markdown">
               {{ page.header.detail.text  | markdown}}
           </article>
-          <article class="detail-gallerie">
-              {% for img in page.header.gallerie | split(',')%}
-                  <article style="background-image: url('{{ page.media[img].cropZoom(400,400).url }}')" data-src="{{ page.media[img].cropZoom(1280,720).url }}"></article>
-              {% endfor %}
+          {% if page.header.gallerie %}
+              <article class="detail-gallerie">
+                  {% for img in page.header.gallerie | split(',')%}
+                      <article style="background-image: url('{{ page.media[img].cropZoom(400,400).url }}')" data-src="{{ page.media[img].cropZoom(1280,720).url }}"></article>
+                  {% endfor %}
 
-          </article>
+              </article>
+          {% endif %}
       </article>
   </section>
 
