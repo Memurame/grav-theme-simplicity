@@ -9,8 +9,8 @@ header:
     linkedin: 'https://linkedin.com'
     google: 'https://google.com'
   image:
-    user/themes/simplicity/images/custom/businessman-310819_640.png:
-      name: businessman-310819_640.png
+    user/themes/simplicity/images/custom/default_avatar.png:
+      name: default_avatar.png
       type: image/png
       size: 69163
-      path: user/themes/simplicity/images/custom/businessman-310819_640.png
+      path: user/themes/simplicity/images/custom/default_avatar.png

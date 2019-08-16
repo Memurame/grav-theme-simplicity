@@ -1,3 +1,19 @@
+# Phpstorm
+.idea
+
+# Composer
+.composer
+vendor/*
+!*/vendor/*
+composer.lock
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+
 node_modules
 scss/core
 js/core
