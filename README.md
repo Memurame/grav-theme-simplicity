@@ -1,5 +1,9 @@
 # Simplicity Theme
 
+![screenshot](https://user-images.githubusercontent.com/15847494/63199854-6f2b5080-c07f-11e9-97f0-7ea314a96c75.jpg)
+
+A simple design with which you can make your own portfolio. Modular page layout and separate project overview and detail page
+
 # Installation
 
 Installing the Simplicity theme can be done in one of two ways. 
@@ -79,6 +83,27 @@ templating information is now being pulled from the **simplicity** folder.
 # Configure the Theme
 
 ## Header
+<img width="1144" alt="Bildschirmfoto 2019-08-16 um 23 38 28" src="https://user-images.githubusercontent.com/15847494/63199894-89fdc500-c07f-11e9-836c-7037477b0648.png">
 
+In the theme settings you can change the corresponding information about yourself and also upload your own profile picture.
 
-## Pages
+Or change manual in the file `/your/site/grav/user/config/themes/simplicity.yaml`.
+
+```yaml
+enabled: true
+header:
+  name: 'Hans Müller'
+  subtitle: Web-Entwickler
+  social:
+    github: 'https://github.com/mueller'
+    facebook: 'https://facebook.com'
+    twitter: 'https://twitter.com'
+    linkedin: 'https://linkedin.com'
+    google: 'https://google.com'
+  image:
+    user/themes/simplicity/images/custom/default_avatar.png:
+      name: default_avatar.png
+      type: image/png
+      size: 69163
+      path: user/themes/simplicity/images/custom/default_avatar.png
+```
