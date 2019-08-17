@@ -122,7 +122,7 @@ header:
 ```
 
 ## To-Do's
-*[ ] Contact button in header
-*[ ] Contact box (modular)
-*[ ] Blog page and modular box for the latest blogs
+* [ ] Contact button in header
+* [ ] Contact box (modular)
+* [ ] Blog page and modular box for the latest blogs
  
