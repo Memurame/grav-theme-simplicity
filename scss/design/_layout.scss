@@ -195,6 +195,11 @@ a{
   @include media-breakpoint-down(md) {
     padding: 2rem 1rem;
   }
+  @include media-breakpoint-down(xs) {
+    h2{
+      max-width: 250px;
+    }
+  }
   .backlink{
     position: absolute;
     right: 2rem;

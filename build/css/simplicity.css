@@ -16545,6 +16545,12 @@ a:hover {
   }
 }
 
+@media (max-width: 575.98px) {
+  .page h2 {
+    max-width: 250px;
+  }
+}
+
 .page .backlink {
   position: absolute;
   right: 2rem;
