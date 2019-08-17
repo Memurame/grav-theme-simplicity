@@ -3,7 +3,7 @@
 {% block main %}
 
   {% for module in page.collection() %}
-      {% if module.header.position == 'main' or module.template() == 'modular/projects' %}
+      {% if module.header.position == 'main' or module.template() == 'modular/entry_list' %}
         {{ module.content }}
       {% endif %}
   {% endfor %}
