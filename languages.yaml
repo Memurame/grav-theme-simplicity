@@ -56,7 +56,7 @@ de:
       PROJECTS:
         FIELDS:
           REFERENCE:
-            LABEL: "Projekt Seite auswählen"
+            LABEL: "Projektseite auswählen"
           COUNT:
             LABEL: "Anzahl"
             OPTIONS:
@@ -96,6 +96,109 @@ de:
                   LABEL: "Beschreibung"
                 GALLERIE:
                   LABEL: "Gallerie"
+en:
+  THEME_SIMPLICITY:
+    CONFIG:
+      FIELDS:
+        SECTION:
+          PERSON:
+            LABEL: "Person"
+            FIELDS:
+              NAME:
+                LABEL: "Your name"
+              SUBTITLE:
+                LABEL: "Your job"
+              IMAGE:
+                LABEL: "Avatar"
+          SOCIAL:
+            LABEL: "Social media"
+    GLOBAL:
+      TABS:
+        1: "Content"
+      FIELDS:
+        TITLE:
+          LABEL: "Title"
+        POSITION:
+          LABEL: "Position of the content"
+          OPTIONS:
+            MAIN: "Main"
+            SIDEBAR: "Sidebar"
+          DESCRIPTION: "This setting is disabled here"
+    MODULAR:
+      EDUCATION:
+        FIELDS:
+          EDUCATION:
+            LABEL: "Education"
+            FIELDS:
+              NAME:
+                LABEL: "Description"
+              SCHOOL:
+                LABEL: "School"
+              DATE:
+                LABEL: "Duration of education"
+                DESCRIPTION: "Example: `2018-2019`"
+      EXPERIENCE:
+        FIELDS:
+          EXPERIENCE:
+            LABEL: "Experience"
+            FIELDS:
+              JOB:
+                LABEL: "Job"
+              COMPANY:
+                LABEL: "Company"
+              DATE:
+                LABEL: "Employment duration"
+                DESCRIPTION: "BeispielExample: `2018-2019`"
+              TEXT:
+                LABEL: "Description"
+      PROJECTS:
+        FIELDS:
+          REFERENCE:
+            LABEL: "Select project page"
+          COUNT:
+            LABEL: "Count"
+            OPTIONS:
+              2: "The last 2 projects"
+              5: "The last 5 projects"
+              10: "The last 10 projects"
+      SKILLS:
+        FIELDS:
+          TEXT:
+            LABEL: "Short introduction"
+          SKILLS:
+            LABEL: "Knowledge"
+            FIELDS:
+              NAME:
+                LABEL: "Description"
+              LEVEL:
+                LABEL: "Level"
+      TEXT:
+        FIELDS:
+          TEXT:
+            LABEL: "Text"
+    PAGES:
+      PROJECTITEM:
+        FIELDS:
+          SECTION:
+            VORSCHAU:
+              LABEL: "Preview"
+              FIELDS:
+                IMAGE:
+                  LABEL: "Image"
+                TEXT:
+                  LABEL: "Short introduction"
+            DETAIL:
+              LABEL: "Detail description"
+              FIELDS:
+                TEXT:
+                  LABEL: "Description"
+                GALLERIE:
+                  LABEL: "Gallery"
+
+
+
+
+
 
 
 

@@ -16378,6 +16378,16 @@ h2.heading {
   margin-bottom: 2rem;
 }
 
+a {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #E74C3C;
+}
+
 .markdown p:last-child {
   margin-bottom: 0;
 }
@@ -16451,6 +16461,7 @@ h2.heading {
   }
   .site-header .header-container .header-info {
     margin: 0;
+    text-align: center;
   }
   .site-header .header-container .header-info h1 {
     margin-top: 20px;
@@ -16458,6 +16469,18 @@ h2.heading {
   .site-header .header-container .header-info .header-social ul {
     text-align: center;
   }
+}
+
+.site-footer {
+  width: 100%;
+  background-color: #2C3E50;
+  text-align: center;
+}
+
+.site-footer .copyright {
+  font-size: 14px;
+  color: lightgrey;
+  line-height: 40px;
 }
 
 .project-list {
@@ -16490,10 +16513,6 @@ h2.heading {
   display: block;
 }
 
-.project-list .project-item .item-desc a {
-  color: #E74C3C;
-}
-
 .project-list.widget .project-item .item-image img {
   width: 180px;
 }
@@ -16517,12 +16536,19 @@ h2.heading {
   background-color: #ffffff;
   padding: 2rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 @media (max-width: 991.98px) {
   .page {
     padding: 2rem 1rem;
   }
+}
+
+.page .backlink {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 
 .page-project .project-detail {

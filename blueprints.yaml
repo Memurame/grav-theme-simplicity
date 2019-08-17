@@ -6,6 +6,7 @@ keywords: portfolio, modular, simple, project, responsive, theme, modern
 author:
   name: Tom Hirter
   email: github@hirter.dev
+  url: https://hirter.dev
 homepage: https://github.com/Memurame/grav-theme-simplicity
 bugs: https://github.com/Memurame/grav-theme-simplicity/issues
 license: MIT
