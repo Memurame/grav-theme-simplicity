@@ -46,6 +46,23 @@ a{
   }
 }
 
+.tags{
+  margin-bottom: 1rem;
+  .project-tag{
+    border-radius: 1px;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    color: $color6;
+    background-color: $color4;
+  }
+}
+
 .site-header{
   border-top: 8px solid $color4;
   width: 100vw;
@@ -206,9 +223,43 @@ a{
     top: 2rem;
   }
   &-projects{
+    .project-filters{
+      margin-bottom: 1rem;
+      .filter-button{
+        position: relative;
+        border: 0;
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: $color1;
+        display: inline-block;
+        color: $color6;
+        outline-style: none;
+        margin-right: 4px;
+        &:hover, &.active{
+          background-color: $color2;
+        }
 
+      }
+    }
   }
   &-project{
+    footer{
+      display: flex;
+      margin-top: 1rem;
+      background-color: $color3;
+      align-items: center;
+      padding: 10px 5px;
+      div{
+        flex: 1;
+      }
+      .tags{
+        margin: 0;
+      }
+      .project-info{
+        text-align: right;
+        font-size: 12px;
+      }
+    }
     .project-detail{
       display: flex;
       flex-flow: column;

@@ -31,7 +31,8 @@
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.12",
     "sweetalert2": "^8.8.7",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "isotope-layout": "^3.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",

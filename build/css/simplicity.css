@@ -16392,6 +16392,24 @@ a:hover {
   margin-bottom: 0;
 }
 
+.tags {
+  margin-bottom: 1rem;
+}
+
+.tags .project-tag {
+  border-radius: 1px;
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  color: #ffffff;
+  background-color: #3498DB;
+}
+
 .site-header {
   border-top: 8px solid #3498DB;
   width: 100vw;
@@ -16555,6 +16573,47 @@ a:hover {
   position: absolute;
   right: 2rem;
   top: 2rem;
+}
+
+.page-projects .project-filters {
+  margin-bottom: 1rem;
+}
+
+.page-projects .project-filters .filter-button {
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #2C3E50;
+  display: inline-block;
+  color: #ffffff;
+  outline-style: none;
+  margin-right: 4px;
+}
+
+.page-projects .project-filters .filter-button:hover, .page-projects .project-filters .filter-button.active {
+  background-color: #E74C3C;
+}
+
+.page-project footer {
+  display: flex;
+  margin-top: 1rem;
+  background-color: #ECF0F1;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.page-project footer div {
+  flex: 1;
+}
+
+.page-project footer .tags {
+  margin: 0;
+}
+
+.page-project footer .project-info {
+  text-align: right;
+  font-size: 12px;
 }
 
 .page-project .project-detail {

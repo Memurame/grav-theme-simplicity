@@ -4,6 +4,19 @@
 
 A simple design with which you can make your own portfolio. Modular page layout and separate project overview and detail page
 
+# Features
+
+## Modular
+*  **Skills** - Here you can list your knowledge and how well you know yourself.
+*  **Experience** - A list of companies where you have already worked and gained experience.
+*  **Education** - Also a list where you can deposit your education.
+*  **Text** - A normal text block that has many uses.
+*  **Last projects** - If you have created a project page, you can present it on your homepage.
+
+## Pages
+* **Projects** - An overview of your projects. Prerequisite to create further projects. The overview has a filter that lets you filter the ad by tags.
+* **Project entry** - These are the actual projects which are displayed on the project overview.
+
 # Installation
 
 Installing the Simplicity theme can be done in one of two ways. 

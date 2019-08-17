@@ -13,12 +13,21 @@
                 <div class="item-desc">
                     <strong class="title">{{ item.header.title }}</strong>
                     <p>{{ item.header.preview.text }}</p>
-                    <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> zum Projekt</a>
+                    {% if  item.header.tags %}
+                        <div class="tags">
+
+                            <small>Tags: </small>
+                            {% for tag in item.header.tags %}
+                                <span class="project-tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
                 </div>
             </article>
 
 
         {% endfor %}
     </article>
-    <a href="{{ base_url_absolute }}/{{ page.header.reference[1:] }}" class="btn btn-block"><i class="fas fa-external-link-alt"></i> Weitere Projekte</a>
+    <a href="{{ base_url_absolute }}/{{ page.header.reference[1:] }}" class="btn btn-block"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.OTHERPROJEKT" | t  }}</a>
 </section>

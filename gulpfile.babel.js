@@ -77,7 +77,8 @@ const files = {
       path.src.core.js + 'jquery.min.js',
       path.src.core.js + 'sweetalert2.all.min.js',
       path.src.core.js + 'bootstrap.bundle.min.js',
-      path.src.core.js + 'lightgallery.js'
+      path.src.core.js + 'lightgallery.js',
+      path.src.core.js + 'isotope.pkgd.js'
     ]
   },
   scss: {
@@ -133,7 +134,11 @@ const dependencies = {
       src: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
       dest: path.src.core.js
     },
-  
+    isotope: {
+      base: path.src.core.js + 'isotope.pkgd.js',
+      src: 'node_modules/isotope-layout/dist/isotope.pkgd.js',
+      dest: path.src.core.js
+    },
     sweetalert: {
       base: path.src.core.js + 'sweetalert2.all.min.js',
       src: 'node_modules/sweetalert2/dist/sweetalert2.all.min.js',

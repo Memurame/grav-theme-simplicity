@@ -4,7 +4,7 @@
 
   <section class="page page-project">
       <h2 class="heading">{{ page.header.title }}</h2>
-      <a href="{{ base_url_absolute }}{{ page.parent().url() }}" class="backlink">zurück</a>
+      <a href="{{ base_url_absolute }}{{ page.parent().url() }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
       <article class="project-detail">
           <article class="detail-preview">
               <div class="preview-image">
@@ -26,6 +26,21 @@
 
               </article>
           {% endif %}
+          <footer>
+              {% if  page.header.tags %}
+                  <div class="tags">
+
+                      <small>Tags: </small>
+                      {% for tag in page.header.tags %}
+                          <span class="project-tag">{{ tag }}</span>
+                      {% endfor %}
+                  </div>
+              {% endif %}
+              <div class="project-info">
+                  <strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('t. m. Y') }}
+              </div>
+          </footer>
+
       </article>
   </section>
 

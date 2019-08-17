@@ -4,11 +4,14 @@
 
   <section class="page page-projects">
       <h2 class="heading">{{ page.header.title }}</h2>
-      <a href="{{ home_url }}" class="backlink">zurück</a>
+      <a href="{{ home_url }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
+      <div class="project-filters">
+          <button data-filter="" class="filter-button active">Alle</button>
+      </div>
       <article class="project-list">
           {% for item in page.children() %}
 
-              <article class="project-item">
+              <article class="project-item {{ item.header.tags | join(' ') }}">
                   <div class="item-image">
                       {% set preview_image = item.header.preview.image | first %}
                       <img src="{{ preview_image.path }}">
@@ -16,7 +19,18 @@
                   <div class="item-desc">
                       <strong class="title">{{ item.header.title }}</strong>
                       <p>{{ item.header.preview.text }}</p>
-                      <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> zum Projekt</a>
+
+                      {% if  item.header.tags %}
+                          <div class="tags">
+
+                              <small>Tags: </small>
+                              {% for tag in item.header.tags %}
+                                  <span class="project-tag">{{ tag }}</span>
+                              {% endfor %}
+                          </div>
+                      {% endif %}
+
+                      <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
                   </div>
               </article>
 

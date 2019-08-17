@@ -1,5 +1,10 @@
 de:
   THEME_SIMPLICITY:
+    FRONTEND:
+      PROJEKTLINK: "zum Projekt"
+      OTHERPROJEKT: "Weitere Projekte"
+      CREATED: "Erstellt"
+      BACK: "zurück"
     CONFIG:
       FIELDS:
         SECTION:
@@ -81,6 +86,8 @@ de:
     PAGES:
       PROJECTITEM:
         FIELDS:
+          TAGS:
+            LABEL: "Kategorien"
           SECTION:
             VORSCHAU:
               LABEL: "Vorschau"
@@ -98,6 +105,11 @@ de:
                   LABEL: "Gallerie"
 en:
   THEME_SIMPLICITY:
+    FRONTEND:
+      PROJEKTLINK: "read more"
+      OTHERPROJEKT: "Other Projects"
+      CREATED: "created"
+      BACK: "back"
     CONFIG:
       FIELDS:
         SECTION:
@@ -179,6 +191,8 @@ en:
     PAGES:
       PROJECTITEM:
         FIELDS:
+          TAGS:
+            LABEL: "Tags"
           SECTION:
             VORSCHAU:
               LABEL: "Preview"

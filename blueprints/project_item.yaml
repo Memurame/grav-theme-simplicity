@@ -15,6 +15,13 @@ form:
               type: text
               autofocus: true
               label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+            header.tags:
+              type: selectize
+              label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.TAGS.LABEL
+              classes: fancy
+              help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
+              validate:
+                type: commalist
             preview:
               type: section
               title: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.LABEL
@@ -40,7 +47,6 @@ form:
                   rows: 6
                   label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.DETAIL.FIELDS.TEXT.LABEL
                   validate:
-                    required: true
                     type: textarea
                 header.gallerie:
                   type: pagemedia
