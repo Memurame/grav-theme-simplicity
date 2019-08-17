@@ -1,3 +1,11 @@
+# v0.0.12
+## 17-08-2019
+
+1. [](#improved)
+    * change projects to entries for custom use
+    * update demo
+    * some changes
+
 # v0.0.11
 ## 17-08-2019
 

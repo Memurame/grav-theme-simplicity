@@ -1,8 +1,8 @@
 de:
   THEME_SIMPLICITY:
     FRONTEND:
-      PROJEKTLINK: "zum Projekt"
-      OTHERPROJEKT: "Weitere Projekte"
+      PROJEKTLINK: "mehr lesen"
+      OTHERPROJEKT: "Mehr Einträge"
       CREATED: "Erstellt"
       BACK: "zurück"
     CONFIG:
@@ -61,13 +61,23 @@ de:
       PROJECTS:
         FIELDS:
           REFERENCE:
-            LABEL: "Projektseite auswählen"
+            LABEL: "Eintragsliste auswählen"
           COUNT:
             LABEL: "Anzahl"
             OPTIONS:
-              2: "Die 2 letzten Projekte"
-              5: "Die 5 letzten Projekte"
-              10: "Die 10 letzten Projekte"
+              2: "Die 2 letzten Einträge"
+              5: "Die 5 letzten Einträge"
+              10: "Die 10 letzten Einträge"
+          LAYOUT:
+            LABEL: "Darstellung"
+            OPTIONS:
+              1: "Darstellung 1 (mit Bild)"
+              2: "Darstellung 2 (ohne Bild)"
+          TAGS:
+            LABEL: "Show tags?"
+            OPTIONS:
+              0: "No"
+              1: "Yes"
       SKILLS:
         FIELDS:
           TEXT:
@@ -107,7 +117,7 @@ en:
   THEME_SIMPLICITY:
     FRONTEND:
       PROJEKTLINK: "read more"
-      OTHERPROJEKT: "Other Projects"
+      OTHERPROJEKT: "Other entries"
       CREATED: "created"
       BACK: "back"
     CONFIG:
@@ -166,13 +176,23 @@ en:
       PROJECTS:
         FIELDS:
           REFERENCE:
-            LABEL: "Select project page"
+            LABEL: "Select entry list"
           COUNT:
             LABEL: "Count"
             OPTIONS:
-              2: "The last 2 projects"
-              5: "The last 5 projects"
-              10: "The last 10 projects"
+              2: "The last 2 entries"
+              5: "The last 5 entries"
+              10: "The last 10 entries"
+          LAYOUT:
+            LABEL: "Layout"
+            OPTIONS:
+              1: "Layout 1 (with Image)"
+              2: "Layout 2 (without Image)"
+          TAGS:
+            LABEL: "Show tags?"
+            OPTIONS:
+              0: "No"
+              1: "Yes"
       SKILLS:
         FIELDS:
           TEXT:

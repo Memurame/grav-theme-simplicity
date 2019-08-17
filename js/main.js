@@ -4,8 +4,8 @@ import Vue from 'vue'
 $(".detail-gallerie").lightGallery();
 
 $(document).ready(function() {
-    let $projectlist = $('.project-list');
-    let $boxes = $('.project-item');
+    let $projectlist = $('.entrylist');
+    let $boxes = $('.entry-item');
     $boxes.hide();
 
     $boxes.fadeIn();
@@ -13,16 +13,16 @@ $(document).ready(function() {
         // options
         sortBy : 'original-order',
         layoutMode: 'fitRows',
-        itemSelector: '.project-item',
+        itemSelector: '.entry-item',
         stagger: 30
     });
 
     let tags = [];
-    $('.project-tag').each(function(){
+    $('.entry-tag').each(function(){
         let tagname = $(this).text();
         if(tags.indexOf(tagname) == -1){
             tags.push(tagname);
-            $('.project-filters').append('<button data-filter=".' + tagname + '" class="filter-button">' + tagname + '</button>')
+            $('.entry-filters').append('<button data-filter=".' + tagname + '" class="filter-button">' + tagname + '</button>')
         }
 
     })

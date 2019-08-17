@@ -10,27 +10,30 @@ body,html{
   color: $color5;
 }
 
-h1.name{
+/* ##################################
+ Formatierugen
+###################################*/
+
+h1, h2, h3, h4, h5, h6{
   font-family: $font1;
   color: $color1;
-  font-size: 38px;
-  font-weight: 700;
-}
-h2.desc{
-  font-family: $font2;
-  color: $color5;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 h2.heading{
-  font-family: $font1;
-  color: $color1;
-  font-size: 24px;
-  font-weight: 700;
   margin-bottom: 2rem;
 }
-
+h3{
+  font-size: 20px;
+}
+h4, h5, h6{
+  font-size: 18px;
+}
+p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 a{
   color: $color2;
   text-decoration: none;
@@ -40,15 +43,58 @@ a{
   }
 }
 
-.markdown{
-  p:last-child{
-    margin-bottom: 0;
+strong{
+  font-family: $font1;
+}
+
+ul:not(.sociallinks), ol{
+  margin: 0;
+  padding: 0;
+  li{
+    position: relative;
+    list-style: none;
+    line-height: 160%;
+    padding-left: 30px;
+
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphenate-limit-chars: 5;
+    -webkit-hyphenate-limit-chars: 5;
+    -ms-hyphenate-limit-chars: 5;
+    hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-lines: 2;
+
+    &::before{
+      content: '';
+      position: absolute;
+      height: 6px;
+      width: 6px;
+      border-radius: 100%;
+      background-color: $color1;
+      top: 14px;
+      left: 10px;
+      transform: translateY(-50%);
+
+    }
   }
 }
 
+blockquote{
+  background-color: $color3;
+  padding: 5px;
+  border: 1px solid $color5;
+  p{margin: 0;}
+}
+
+/* ##################################
+ Layout
+###################################*/
+
 .tags{
   margin-bottom: 1rem;
-  .project-tag{
+  span{
     border-radius: 1px;
     display: inline-block;
     padding: .25em .4em;
@@ -61,6 +107,107 @@ a{
     color: $color6;
     background-color: $color4;
   }
+}
+.entrylist{
+  &.layout-1{
+    display: flex;
+    flex-flow: column;
+    .entry-item{
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid $color3;
+      padding: 1rem 0 1rem 0;
+      &:first-child{
+        border-top: 1px solid $color3;
+      }
+      .item-image{
+        img{
+          width: 250px;
+        }
+      }
+      .item-desc{
+        strong.title{
+          font-family: $font1;
+          margin-bottom: 1rem;
+          display: block;
+        }
+        padding-left: 1rem;
+      }
+    }
+
+    &.widget{
+      .entry-item{
+        .item-image{
+          img{
+            width: 180px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .entry-item{
+        display: block;
+        .item-image{
+          img{
+            width: 100% !important;
+          }
+        }
+        .item-desc{
+          padding: 0;
+          strong.title{
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+  &.layout-2{
+    display: flex;
+    flex-flow: column;
+    .entry-item{
+      display: flex;
+      width: 100%;
+      border-bottom: 1px solid $color3;
+      padding: 1rem 0 1rem 0;
+      &:first-child{
+        border-top: 1px solid $color3;
+      }
+      .item-image{
+        display: none;
+      }
+      .item-desc{
+        strong.title{
+          font-family: $font1;
+          margin-bottom: 1rem;
+          display: block;
+        }
+      }
+    }
+
+    &.widget{
+      .entry-item{
+        .item-image{
+          img{
+            width: 180px;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .entry-item{
+        display: block;
+        .item-image{
+          img{
+            width: 100% !important;
+          }
+        }
+        .item-desc{
+          padding: 0;
+        }
+      }
+    }
+  }
+
 }
 
 .site-header{
@@ -84,6 +231,19 @@ a{
     }
     .header-info{
       margin-left: 2rem;
+      h1.name{
+        font-family: $font1;
+        color: $color1;
+        font-size: 38px;
+        font-weight: 700;
+      }
+      h2.desc{
+        font-family: $font2;
+        color: $color5;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
       .header-social{
         ul{
           padding-left: 0;
@@ -151,59 +311,6 @@ a{
   }
 }
 
-.project-list{
-  display: flex;
-  flex-flow: column;
-  .project-item{
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid $color3;
-    padding: 1rem 0 1rem 0;
-    &:first-child{
-      border-top: 1px solid $color3;
-    }
-    .item-image{
-      img{
-        width: 250px;
-      }
-    }
-    .item-desc{
-      strong.title{
-        font-family: $font1;
-        margin-bottom: 1rem;
-        display: block;
-      }
-      padding-left: 1rem;
-    }
-  }
-  &.widget{
-    .project-item{
-      .item-image{
-        img{
-          width: 180px;
-        }
-      }
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    .project-item{
-      display: block;
-      .item-image{
-        img{
-          width: 100% !important;
-        }
-      }
-      .item-desc{
-        padding: 0;
-        strong.title{
-          margin-top: 1rem;
-        }
-      }
-    }
-  }
-}
-
-
 .page{
   background-color: $color6;
   padding: 2rem;
@@ -213,7 +320,7 @@ a{
     padding: 2rem 1rem;
   }
   @include media-breakpoint-down(xs) {
-    h2{
+    h2.heading{
       max-width: 250px;
     }
   }
@@ -222,8 +329,8 @@ a{
     right: 2rem;
     top: 2rem;
   }
-  &-projects{
-    .project-filters{
+  &-entrylist{
+    .entry-filters{
       margin-bottom: 1rem;
       .filter-button{
         position: relative;
@@ -242,10 +349,9 @@ a{
       }
     }
   }
-  &-project{
+  &-entry{
     footer{
       display: flex;
-      margin-top: 1rem;
       background-color: $color3;
       align-items: center;
       padding: 10px 5px;
@@ -255,12 +361,12 @@ a{
       .tags{
         margin: 0;
       }
-      .project-info{
+      .entry-info{
         text-align: right;
         font-size: 12px;
       }
     }
-    .project-detail{
+    .entry-detail{
       display: flex;
       flex-flow: column;
       padding-top: 1rem;
@@ -277,7 +383,7 @@ a{
         .preview-desc{
           padding-left: 1rem;
           p{
-            margin-bottom: 0;
+            margin: 0;
           }
         }
       }
@@ -347,9 +453,6 @@ a{
   @include media-breakpoint-down(md) {
     padding: 2rem 1rem;
   }
-  strong.title{
-    font-family: $font1;
-  }
   span.subtitle{
     font-size: 16px;
     color: $color5;
@@ -390,7 +493,7 @@ a{
     }
 
   }
-  &-projects{
+  &-entrylist{
     .btn{
       margin-top: 1rem;
       color: #fff;

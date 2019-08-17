@@ -23,8 +23,6 @@ form:
               options:
                 main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
                 sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
-              disabled: true
-              description: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.DESCRIPTION
             header.reference:
               type: pages
               size: medium
@@ -45,3 +43,29 @@ form:
                 10: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.COUNT.OPTIONS.10
               validate:
                 required: true
+            header.layout:
+              type: select
+              label: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.LABEL
+              size: medium
+              options:
+                1: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.1
+                2: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.2
+              validate:
+                required: true
+            header.tags:
+              type: toggle
+              label: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.TAGS.LABEL
+              highlight: 1
+              default: 1
+              options:
+                0: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.TAGS.OPTIONS.0
+                1: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.TAGS.OPTIONS.1
+            header.slice:
+              type: toggle
+              label: "Text auf 180 zeichen beschränken?"
+              highlight: 0
+              default: 0
+              options:
+                0: "Nein"
+                1: "Ja"
+

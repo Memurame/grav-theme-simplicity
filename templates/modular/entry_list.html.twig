@@ -1,24 +1,35 @@
 {% set projectpage = page.find(page.header.reference) %}
 
 
-<section class="modular modular-projects">
+<section class="modular modular-entrylist">
     <h2 class="heading">{{ page.header.title }}</h2>
-    <article class="project-list widget">
+    <article class="entrylist widget layout-{{ page.header.layout }}">
         {% for item in projectpage.children() %}
-            <article class="project-item">
+            <article class="entry-item">
                 <div class="item-image">
-                    {% set preview_image = item.header.preview.image | first %}
-                   <img src="{{ preview_image.path }}">
+                    {% if item.header.preview.image %}
+                        {% set preview_image = item.header.preview.image | first %}
+                        <img src="{{ preview_image.path }}">
+                    {% else %}
+                        <img src="{{ theme_url }}/images/default_image.jpg">
+                    {% endif %}
                 </div>
                 <div class="item-desc">
                     <strong class="title">{{ item.header.title }}</strong>
-                    <p>{{ item.header.preview.text }}</p>
-                    {% if  item.header.tags %}
+                    {% if page.header.slice %}
+                        <p>{{ item.header.preview.text | slice(0, 180) }}
+                            {% if item.header.preview.text|length > 180 %}....{% endif %}
+                        </p>
+                    {% else %}
+                        <p>{{ item.header.preview.text }}</p>
+                    {% endif %}
+
+                    {% if  item.header.tags and page.header.tags %}
                         <div class="tags">
 
                             <small>Tags: </small>
                             {% for tag in item.header.tags %}
-                                <span class="project-tag">{{ tag }}</span>
+                                <span class="entry-tag">{{ tag }}</span>
                             {% endfor %}
                         </div>
                     {% endif %}

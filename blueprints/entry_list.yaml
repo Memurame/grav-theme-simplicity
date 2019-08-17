@@ -15,4 +15,13 @@ form:
               type: text
               autofocus: true
               label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+            header.layout:
+              type: select
+              label: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.LABEL
+              size: medium
+              options:
+                1: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.1
+                2: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.2
+              validate:
+                required: true
 
