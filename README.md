@@ -14,8 +14,8 @@ A simple design with which you can make your own portfolio. Modular page layout 
 *  **Last projects** - If you have created a project page, you can present it on your homepage.
 
 ## Pages
-* **Projects** - An overview of your projects. Prerequisite to create further projects. The overview has a filter that lets you filter the ad by tags.
-* **Project entry** - These are the actual projects which are displayed on the project overview.
+* **Entry list** - An overview of your projects. Prerequisite to create further projects. The overview has a filter that lets you filter the ad by tags.
+* **Entry** - These are the actual projects which are displayed on the project overview.
 
 # Installation
 
