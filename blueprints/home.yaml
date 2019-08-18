@@ -5,19 +5,18 @@ form:
     tabs:
       type: tabs
       active: 1
-
       fields:
         inhalt:
           type: tab
-          title: THEME_SIMPLICITY.GLOBAL.TABS.1
+          title: THEME_SIMPLICITY.ADMIN.TAB.CONTENT
           fields:
             header.title:
               type: text
               autofocus: true
-              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.TITLE.LABEL
             modular:
               type: section
-              title: "Modular"
+              title: THEME_SIMPLICITY.ADMIN.SECTION.MODULAR
               underline: true
               fields:
                 header.content.items:

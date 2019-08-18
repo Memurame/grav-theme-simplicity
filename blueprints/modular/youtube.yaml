@@ -1,4 +1,4 @@
-title: experience
+title: text
 
 form:
   fields:
@@ -19,33 +19,11 @@ form:
               title: THEME_SIMPLICITY.ADMIN.SECTION.CONTENT
               underline: true
               fields:
-                header.experience:
-                  type: list
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.LABEL
-                  fields:
-                    .job:
-                      type: text
-                      label: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.FIELDS.JOB.LABEL
-                      validate:
-                        required: true
-                    .company:
-                      type: text
-                      label: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.FIELDS.COMPANY.LABEL
-                      validate:
-                        required: true
-                    .date:
-                      type: text
-                      label: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.FIELDS.DATE.LABEL
-                      markdown: true
-                      description: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.FIELDS.DATE.DESCRIPTION
-                      validate:
-                        required: true
-                    .text:
-                      type: textarea
-                      label: THEME_SIMPLICITY.ADMIN.FIELDS.EXPERIENCE.FIELDS.TEXT.LABEL
-                      rows: 4
-                      validate:
-                        required: true
+                header.youtube:
+                  type: text
+                  label: "URL des Youtube Videos"
+                  validate:
+                    required: true
             settings:
               type: section
               title: THEME_SIMPLICITY.ADMIN.SECTION.SETTINGS
@@ -68,4 +46,3 @@ form:
                     main: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.OPTIONS.MAIN
                     sidebar: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.OPTIONS.SIDEBAR
                   description: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.DESCRIPTION
-

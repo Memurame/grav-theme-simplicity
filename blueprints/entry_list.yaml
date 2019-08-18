@@ -5,23 +5,22 @@ form:
     tabs:
       type: tabs
       active: 1
-
       fields:
         inhalt:
           type: tab
-          title: THEME_SIMPLICITY.GLOBAL.TABS.1
+          title: THEME_SIMPLICITY.ADMIN.TAB.CONTENT
           fields:
             header.title:
               type: text
               autofocus: true
-              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.TITLE.LABEL
             header.layout:
               type: select
-              label: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.LAYOUT.LABEL
               size: medium
               options:
-                1: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.1
-                2: THEME_SIMPLICITY.MODULAR.PROJECTS.FIELDS.LAYOUT.OPTIONS.2
+                1: THEME_SIMPLICITY.ADMIN.FIELDS.LAYOUT.OPTIONS.1
+                2: THEME_SIMPLICITY.ADMIN.FIELDS.LAYOUT.OPTIONS.2
               validate:
                 required: true
 

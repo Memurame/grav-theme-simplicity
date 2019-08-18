@@ -5,45 +5,43 @@ form:
     tabs:
       type: tabs
       active: 1
-
       fields:
         inhalt:
           type: tab
-          title: THEME_SIMPLICITY.GLOBAL.TABS.1
+          title: THEME_SIMPLICITY.ADMIN.TAB.CONTENT
           fields:
             header.title:
               type: text
               autofocus: true
-              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.TITLE.LABEL
             content:
               type: section
-              title: "Content"
+              title: THEME_SIMPLICITY.ADMIN.SECTION.CONTENT
               underline: true
               fields:
                 header.text:
                   type: markdown
-                  label: THEME_SIMPLICITY.MODULAR.TEXT.FIELDS.TEXT.LABEL
                   validate:
                     type: textarea
             settings:
               type: section
-              title: "Einstellungen"
+              title: THEME_SIMPLICITY.ADMIN.SECTION.SETTINGS
               underline: true
               fields:
                 header.showtitle:
                   type: toggle
-                  label: "Titel anzeigen?"
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.SHOWTITLE.LABEL
                   highlight: 1
                   default: 1
                   options:
-                    0: "Nein"
-                    1: "Ja"
+                    0: THEME_SIMPLICITY.ADMIN.FIELDS.SHOWTITLE.OPTIONS.0
+                    1: THEME_SIMPLICITY.ADMIN.FIELDS.SHOWTITLE.OPTIONS.1
                 header.position:
                   type: toggle
-                  label: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.LABEL
                   highlight: main
                   default: main
                   options:
-                    main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
-                    sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
-                  description: "Diese Einstellung ist nur auf der Home Seite verfügbar. Auf allen anderen hat diese keinen Einfluss"
+                    main: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.OPTIONS.MAIN
+                    sidebar: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.OPTIONS.SIDEBAR
+                  description: THEME_SIMPLICITY.ADMIN.FIELDS.POSITION.DESCRIPTION

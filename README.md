@@ -11,11 +11,13 @@ A simple design with which you can make your own portfolio. Modular page layout 
 *  **Experience** - A list of companies where you have already worked and gained experience.
 *  **Education** - Also a list where you can deposit your education.
 *  **Text** - A normal text block that has many uses.
-*  **Last projects** - If you have created a project page, you can present it on your homepage.
+*  **Last projects** - This module is mainly intended for the homepage and serves to present your projects, blogs or other subpages
+*  **Gallery** - A small gallery to capture your photos.
 
 ## Pages
 * **Entry list** - An overview of your projects. Prerequisite to create further projects. The overview has a filter that lets you filter the ad by tags.
-* **Entry** - These are the actual projects which are displayed on the project overview.
+* **Modular** - This is a page where you can combine different modules and build your content individually
+* **Home** - Is intended only for the home page. Also modular in design, but with two columns
 
 # Installation
 
@@ -106,7 +108,7 @@ Or change manual in the file `/your/site/grav/user/config/themes/simplicity.yaml
 enabled: true
 header:
   name: 'Hans Müller'
-  subtitle: Web-Entwickler
+  subtitle: Web-Developer
   social:
     github: 'https://github.com/mueller'
     facebook: 'https://facebook.com'

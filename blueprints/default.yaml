@@ -5,45 +5,44 @@ form:
     tabs:
       type: tabs
       active: 1
-
       fields:
         inhalt:
           type: tab
-          title: THEME_SIMPLICITY.GLOBAL.TABS.1
+          title: THEME_SIMPLICITY.ADMIN.TAB.CONTENT
           fields:
             header.title:
               type: text
               autofocus: true
-              label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.TITLE.LABEL
+
             header.tags:
               type: selectize
-              label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.TAGS.LABEL
+              label: THEME_SIMPLICITY.ADMIN.FIELDS.TAGS.LABEL
               classes: fancy
               help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
               validate:
                 type: commalist
             preview:
               type: section
-              title: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.LABEL
+              title: THEME_SIMPLICITY.ADMIN.SECTION.PREVIEW
               underline: true
               fields:
                 header.preview.image:
                   type: file
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.FIELDS.IMAGE.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
                   destination: '@self/preview'
                 header.preview.text:
                   type: textarea
                   rows: 6
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.FIELDS.TEXT.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_TEXT.LABEL
                   validate:
                     required: true
-            modular:
+            content:
               type: section
-              title: "Content"
+              title: THEME_SIMPLICITY.ADMIN.SECTION.CONTENT
               underline: true
               fields:
                 header.text:
                   type: markdown
-                  label: THEME_SIMPLICITY.MODULAR.TEXT.FIELDS.TEXT.LABEL
                   validate:
                     type: textarea

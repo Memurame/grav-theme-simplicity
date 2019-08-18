@@ -5,235 +5,181 @@ de:
       OTHERPROJEKT: "Mehr Einträge"
       CREATED: "Erstellt"
       BACK: "zurück"
-    CONFIG:
-      FIELDS:
-        SECTION:
-          PERSON:
-            LABEL: "Person"
-            FIELDS:
-              NAME:
-                LABEL: "Dein Name"
-              SUBTITLE:
-                LABEL: "Dein Beruf"
-              IMAGE:
-                LABEL: "Profilbild"
-          SOCIAL:
-            LABEL: "Socialmedia"
-    GLOBAL:
-      TABS:
-        1: "Inhalt"
+    ADMIN:
+      TAB:
+        CONTENT: "Inhalt"
+      SECTION:
+        CONTENT: "Seiten Inhalt"
+        SETTINGS: "Einstellugen"
+        PREVIEW: "Vorschau"
+        MODULAR: "Modular"
       FIELDS:
         TITLE:
           LABEL: "Titel"
+        EDUCATION:
+          LABEL: "Bildung"
+          FIELDS:
+            NAME:
+              LABEL: "Bezeichnung"
+            SCHOOL:
+              LABEL: "Schule"
+            DATE:
+              LABEL: "Ausbildungsdauer"
+              DESCRIPTION: "Beispiel: `2018-2019`"
+        SHOWTITLE:
+          LABEL: "Titel anzeigen?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
         POSITION:
           LABEL: "Position des Inhalts"
           OPTIONS:
             MAIN: "Main"
             SIDEBAR: "Sidebar"
-          DESCRIPTION: "Diese Einstellung ist hier deaktiviert"
-    MODULAR:
-      EDUCATION:
-        FIELDS:
-          EDUCATION:
-            LABEL: "Ausbildungen"
-            FIELDS:
-              NAME:
-                LABEL: "Bezeichnung"
-              SCHOOL:
-                LABEL: "Schule"
-              DATE:
-                LABEL: "Ausbildungsdauer"
-                DESCRIPTION: "Beispiel: `2018-2019`"
-      EXPERIENCE:
-        FIELDS:
-          EXPERIENCE:
-            LABEL: "Erfahrungen"
-            FIELDS:
-              JOB:
-                LABEL: "Job"
-              COMPANY:
-                LABEL: "Firma"
-              DATE:
-                LABEL: "Anstellungs Dauer"
-                DESCRIPTION: "Beispiel: `2018-2019`"
-              TEXT:
-                LABEL: "Beschreibung"
-      PROJECTS:
-        FIELDS:
-          REFERENCE:
-            LABEL: "Eintragsliste auswählen"
-          COUNT:
-            LABEL: "Anzahl"
-            OPTIONS:
-              2: "Die 2 letzten Einträge"
-              5: "Die 5 letzten Einträge"
-              10: "Die 10 letzten Einträge"
-          LAYOUT:
-            LABEL: "Darstellung"
-            OPTIONS:
-              1: "Darstellung 1 (mit Bild)"
-              2: "Darstellung 2 (ohne Bild)"
-          TAGS:
-            LABEL: "Show tags?"
-            OPTIONS:
-              0: "No"
-              1: "Yes"
-      SKILLS:
-        FIELDS:
-          TEXT:
-            LABEL: "Kurze Einleitung"
-          SKILLS:
-            LABEL: "Kenntnisse"
-            FIELDS:
-              NAME:
-                LABEL: "Bezeichnung"
-              LEVEL:
-                LABEL: "Level"
-      TEXT:
-        FIELDS:
-          TEXT:
-            LABEL: "Text"
-    PAGES:
-      PROJECTITEM:
-        FIELDS:
-          TAGS:
-            LABEL: "Kategorien"
-          SECTION:
-            VORSCHAU:
-              LABEL: "Vorschau"
-              FIELDS:
-                IMAGE:
-                  LABEL: "Bild"
-                TEXT:
-                  LABEL: "Kurze Einleitung"
-            DETAIL:
-              LABEL: "Detail Beschreibung"
-              FIELDS:
-                TEXT:
-                  LABEL: "Beschreibung"
-                GALLERIE:
-                  LABEL: "Gallerie"
+          DESCRIPTION: "Diese Einstellung ist nur auf der Home Seite verfügbar. Auf allen anderen hat diese keinen Einfluss"
+        REFERENCE:
+          LABEL: "Eintragsliste auswählen"
+        COUNT:
+          LABEL: "Anzahl"
+          OPTIONS:
+            2: "Die 2 letzten Einträge"
+            5: "Die 5 letzten Einträge"
+            10: "Die 10 letzten Einträge"
+        LAYOUT:
+          LABEL: "Darstellung"
+          OPTIONS:
+            1: "Darstellung 1 (mit Bild)"
+            2: "Darstellung 2 (ohne Bild)"
+        SHOWTAGS:
+          LABEL: "Kategorien anzeigen?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        SLICE:
+          LABEL: "Text auf 180 Zeichen beschränken?"
+          OPTIONS:
+            0: "Nein"
+            1: "Ja"
+        EXPERIENCE:
+          LABEL: "Erfahrungen"
+          FIELDS:
+            JOB:
+              LABEL: "Job"
+            COMPANY:
+              LABEL: "Firma"
+            DATE:
+              LABEL: "Anstellungsdauer"
+              DESCRIPTION: "Beispiel: `2018-2019`"
+            TEXT:
+              LABEL: "Beschreibung"
+        GALLERIE:
+          LABEL: "Gallerie"
+        TEXT:
+          LABEL: "Text"
+        SKILLS:
+          LABEL: "Kenntnisse"
+          FIELDS:
+            NAME:
+              LABEL: "Bezeichnung"
+            LEVEL:
+              LABEL: "Level"
+        TAGS:
+          LABEL: "Kategorien"
+        PREVIEW_IMAGE:
+          LABEL: "Bild"
+        PREVIEW_TEXT:
+          LABEL: "Kurze Einleitung"
 en:
   THEME_SIMPLICITY:
     FRONTEND:
       PROJEKTLINK: "read more"
-      OTHERPROJEKT: "Other entries"
-      CREATED: "created"
+      OTHERPROJEKT: "Show more entries"
+      CREATED: "Created"
       BACK: "back"
-    CONFIG:
-      FIELDS:
-        SECTION:
-          PERSON:
-            LABEL: "Person"
-            FIELDS:
-              NAME:
-                LABEL: "Your name"
-              SUBTITLE:
-                LABEL: "Your job"
-              IMAGE:
-                LABEL: "Avatar"
-          SOCIAL:
-            LABEL: "Social media"
-    GLOBAL:
-      TABS:
-        1: "Content"
+    ADMIN:
+      TAB:
+        CONTENT: "Content"
+      SECTION:
+        CONTENT: "Pages content"
+        SETTINGS: "Settings"
+        PREVIEW: "Preview"
+        MODULAR: "Modular"
       FIELDS:
         TITLE:
           LABEL: "Title"
+        EDUCATION:
+          LABEL: "Education"
+          FIELDS:
+            NAME:
+              LABEL: "Description"
+            SCHOOL:
+              LABEL: "School"
+            DATE:
+              LABEL: "duration of education"
+              DESCRIPTION: "Example: `2018-2019`"
+        SHOWTITLE:
+          LABEL: "Show title?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
         POSITION:
           LABEL: "Position of the content"
           OPTIONS:
             MAIN: "Main"
             SIDEBAR: "Sidebar"
-          DESCRIPTION: "This setting is disabled here"
-    MODULAR:
-      EDUCATION:
-        FIELDS:
-          EDUCATION:
-            LABEL: "Education"
-            FIELDS:
-              NAME:
-                LABEL: "Description"
-              SCHOOL:
-                LABEL: "School"
-              DATE:
-                LABEL: "Duration of education"
-                DESCRIPTION: "Example: `2018-2019`"
-      EXPERIENCE:
-        FIELDS:
-          EXPERIENCE:
-            LABEL: "Experience"
-            FIELDS:
-              JOB:
-                LABEL: "Job"
-              COMPANY:
-                LABEL: "Company"
-              DATE:
-                LABEL: "Employment duration"
-                DESCRIPTION: "Example: `2018-2019`"
-              TEXT:
-                LABEL: "Description"
-      PROJECTS:
-        FIELDS:
-          REFERENCE:
-            LABEL: "Select entry list"
-          COUNT:
-            LABEL: "Count"
-            OPTIONS:
-              2: "The last 2 entries"
-              5: "The last 5 entries"
-              10: "The last 10 entries"
-          LAYOUT:
-            LABEL: "Layout"
-            OPTIONS:
-              1: "Layout 1 (with Image)"
-              2: "Layout 2 (without Image)"
-          TAGS:
-            LABEL: "Show tags?"
-            OPTIONS:
-              0: "No"
-              1: "Yes"
-      SKILLS:
-        FIELDS:
-          TEXT:
-            LABEL: "Short introduction"
-          SKILLS:
-            LABEL: "Knowledge"
-            FIELDS:
-              NAME:
-                LABEL: "Description"
-              LEVEL:
-                LABEL: "Level"
-      TEXT:
-        FIELDS:
-          TEXT:
-            LABEL: "Text"
-    PAGES:
-      PROJECTITEM:
-        FIELDS:
-          TAGS:
-            LABEL: "Tags"
-          SECTION:
-            VORSCHAU:
-              LABEL: "Preview"
-              FIELDS:
-                IMAGE:
-                  LABEL: "Image"
-                TEXT:
-                  LABEL: "Short introduction"
-            DETAIL:
-              LABEL: "Detail description"
-              FIELDS:
-                TEXT:
-                  LABEL: "Description"
-                GALLERIE:
-                  LABEL: "Gallery"
-
-
-
-
-
-
+          DESCRIPTION: "This setting is only available on the Home page. On all others this has no influence"
+        REFERENCE:
+          LABEL: "Select entry list"
+        COUNT:
+          LABEL: "Count"
+          OPTIONS:
+            2: "The 2 last entries"
+            5: "The 5 last entries"
+            10: "The 10 last entries"
+        LAYOUT:
+          LABEL: "Layout"
+          OPTIONS:
+            1: "Layout 1 (with image)"
+            2: "Layout 2 (without image)"
+        SHOWTAGS:
+          LABEL: "Show tags?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        SLICE:
+          LABEL: "Limit text to 180 characters?"
+          OPTIONS:
+            0: "No"
+            1: "Yes"
+        EXPERIENCE:
+          LABEL: "Experience"
+          FIELDS:
+            JOB:
+              LABEL: "Job"
+            COMPANY:
+              LABEL: "Company"
+            DATE:
+              LABEL: "Work period"
+              DESCRIPTION: "Example: `2018-2019`"
+            TEXT:
+              LABEL: "Description"
+        GALLERIE:
+          LABEL: "Gallery"
+        TEXT:
+          LABEL: "Text"
+        SKILLS:
+          LABEL: "knowledge"
+          FIELDS:
+            NAME:
+              LABEL: "designation"
+            LEVEL:
+              LABEL: "Level"
+        TAGS:
+          LABEL: "Tags"
+        PREVIEW_IMAGE:
+          LABEL: "Image"
+        PREVIEW_TEXT:
+          LABEL: "Short description"
 
 
 
