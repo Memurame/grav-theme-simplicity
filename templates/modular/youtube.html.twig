@@ -1,8 +1,12 @@
-<section class="modular modular-text">
+<section class="modular modular-youtube">
     {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
     <article class="content markdown">
-        <iframe width="100%" height="500px"
-                src="https://www.youtube.com/embed/{{ page.header.youtube }}">
+        <iframe width="100%"
+                src="https://www.youtube.com/embed/{{ page.header.youtube }}"
+                frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
         </iframe>
     </article>
 </section>
+

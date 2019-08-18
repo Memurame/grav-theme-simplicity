@@ -16780,6 +16780,28 @@ blockquote p {
   margin-top: 1rem;
 }
 
+.modular-youtube iframe {
+  height: 570px;
+}
+
+@media (max-width: 991.98px) {
+  .modular-youtube iframe {
+    height: 500px;
+  }
+}
+
+@media (max-width: 869.98px) {
+  .modular-youtube iframe {
+    height: 280px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modular-youtube iframe {
+    height: 215px;
+  }
+}
+
 .modular-gallery {
   border-top: 1px solid #ECF0F1;
   border-bottom: 1px solid #ECF0F1;
