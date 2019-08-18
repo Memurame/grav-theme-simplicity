@@ -1,6 +1,5 @@
 ---
 title: Education
-position: sidebar
 education:
     -
         name: 'BSc Computer Science'
@@ -10,6 +9,8 @@ education:
         name: 'MSc Psychology and Computer Science'
         school: 'University College London '
         date: 2005-2009
+showtitle: '1'
+position: sidebar
 page_container: container
 ---
 

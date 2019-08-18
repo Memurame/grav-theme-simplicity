@@ -1,3 +1,13 @@
+# v0.0.14
+## 18-08-2019
+
+1. [](#improved)
+    * demo pages with the new page structure
+    * page blueprints changed
+    * the entry pages are now modular
+   [](#new)
+    * new gallery modul
+
 # v0.0.13
 ## 18-08-2019
 

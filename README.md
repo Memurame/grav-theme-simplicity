@@ -121,8 +121,4 @@ header:
       path: user/themes/simplicity/images/custom/default_avatar.png
 ```
 
-## To-Do's
-* [ ] Contact button in header
-* [ ] Contact box (modular)
-* [ ] Blog page and modular box for the latest blogs
  
