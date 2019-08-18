@@ -1,4 +1,4 @@
-title: experience
+title: text
 
 form:
   fields:
@@ -20,33 +20,9 @@ form:
               title: "Content"
               underline: true
               fields:
-                header.experience:
-                  type: list
-                  label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.LABEL
-                  fields:
-                    .job:
-                      type: text
-                      label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.JOB.LABEL
-                      validate:
-                        required: true
-                    .company:
-                      type: text
-                      label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.COMPANY.LABEL
-                      validate:
-                        required: true
-                    .date:
-                      type: text
-                      label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.DATE.LABEL
-                      markdown: true
-                      description: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.DATE.DESCRIPTION
-                      validate:
-                        required: true
-                    .text:
-                      type: textarea
-                      label: THEME_SIMPLICITY.MODULAR.EXPERIENCE.FIELDS.EXPERIENCE.FIELDS.TEXT.LABEL
-                      rows: 4
-                      validate:
-                        required: true
+                header.gallerie:
+                  type: pagemedia
+                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.DETAIL.FIELDS.GALLERIE.LABEL
             settings:
               type: section
               title: "Einstellungen"
@@ -69,4 +45,3 @@ form:
                     main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
                     sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
                   description: "Diese Einstellung ist nur auf der Home Seite verfügbar. Auf allen anderen hat diese keinen Einfluss"
-

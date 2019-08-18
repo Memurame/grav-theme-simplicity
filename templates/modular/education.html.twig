@@ -1,5 +1,5 @@
 <section class="modular modular-education">
-    <h2 class="heading">{{ page.header.title }}</h2>
+    {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
     <article class="content">
         {% for edu in page.header.education %}
             <div>

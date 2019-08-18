@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 
-$(".detail-gallerie").lightGallery();
+$(".gallery").lightGallery();
 
 $(document).ready(function() {
     let $projectlist = $('.entrylist');

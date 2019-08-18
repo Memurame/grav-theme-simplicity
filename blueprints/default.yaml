@@ -1,4 +1,4 @@
-title: entry
+title: modular
 
 form:
   fields:
@@ -37,20 +37,13 @@ form:
                   label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.FIELDS.TEXT.LABEL
                   validate:
                     required: true
-            details:
+            modular:
               type: section
-              title: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.DETAIL.LABEL
+              title: "Content"
               underline: true
               fields:
-                header.detail.text:
+                header.text:
                   type: markdown
-                  rows: 6
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.DETAIL.FIELDS.TEXT.LABEL
+                  label: THEME_SIMPLICITY.MODULAR.TEXT.FIELDS.TEXT.LABEL
                   validate:
                     type: textarea
-                header.gallerie:
-                  type: pagemedia
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.DETAIL.FIELDS.GALLERIE.LABEL
-
-
-

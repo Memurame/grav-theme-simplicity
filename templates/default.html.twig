@@ -1,7 +1,24 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  <article>
-    {{ page.content }}
-  </article>
+    <section class="page page-default">
+        <h2 class="heading">{{ page.header.title }}</h2>
+        <article class="content">
+            {{ page.header.text | markdown }}
+            <footer>
+                {% if  page.header.tags %}
+                    <div class="tags">
+
+                        <small>Tags: </small>
+                        {% for tag in page.header.tags %}
+                            <span class="entry-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <div class="entry-info">
+                    <strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('d. m. Y') }}
+                </div>
+            </footer>
+        </article>
+    </section>
 {% endblock %}

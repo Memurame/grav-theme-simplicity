@@ -3,7 +3,7 @@
 
 <section class="modular modular-entrylist">
     <h2 class="heading">{{ page.header.title }}</h2>
-    <article class="entrylist widget layout-{{ page.header.layout }}">
+    <article class="content entrylist widget layout-{{ page.header.layout }}">
         {% for item in projectpage.children.published() | slice(0, page.header.count) %}
             <article class="entry-item">
                 <div class="item-image">

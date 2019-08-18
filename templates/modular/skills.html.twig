@@ -1,6 +1,6 @@
 <section class="modular modular-skills">
     <div class="intro">
-        <h2 class="heading">{{ page.header.title }}</h2>
+        {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
         <p>{{ page.header.text }}</p>
     </div>
     <article class="content">

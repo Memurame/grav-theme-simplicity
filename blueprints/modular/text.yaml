@@ -15,16 +15,35 @@ form:
               type: text
               autofocus: true
               label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
-            header.position:
-              type: toggle
-              label: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.LABEL
-              highlight: main
-              default: main
-              options:
-                main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
-                sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
-            header.text:
-              type: markdown
-              label: THEME_SIMPLICITY.MODULAR.TEXT.FIELDS.TEXT.LABEL
-              validate:
-                type: textarea
+            content:
+              type: section
+              title: "Content"
+              underline: true
+              fields:
+                header.text:
+                  type: markdown
+                  label: THEME_SIMPLICITY.MODULAR.TEXT.FIELDS.TEXT.LABEL
+                  validate:
+                    type: textarea
+            settings:
+              type: section
+              title: "Einstellungen"
+              underline: true
+              fields:
+                header.showtitle:
+                  type: toggle
+                  label: "Titel anzeigen?"
+                  highlight: 1
+                  default: 1
+                  options:
+                    0: "Nein"
+                    1: "Ja"
+                header.position:
+                  type: toggle
+                  label: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.LABEL
+                  highlight: main
+                  default: main
+                  options:
+                    main: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.MAIN
+                    sidebar: THEME_SIMPLICITY.GLOBAL.FIELDS.POSITION.OPTIONS.SIDEBAR
+                  description: "Diese Einstellung ist nur auf der Home Seite verfügbar. Auf allen anderen hat diese keinen Einfluss"

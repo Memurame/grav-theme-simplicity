@@ -16461,20 +16461,38 @@ blockquote p {
   background-color: #3498DB;
 }
 
-.entrylist.layout-1 {
+.entrylist {
   display: flex;
   flex-flow: column;
 }
 
-.entrylist.layout-1 .entry-item {
+.entrylist .entry-item {
   display: flex;
   width: 100%;
   border-bottom: 1px solid #ECF0F1;
   padding: 1rem 0 1rem 0;
 }
 
-.entrylist.layout-1 .entry-item:first-child {
+.entrylist .entry-item:first-child {
   border-top: 1px solid #ECF0F1;
+}
+
+.entrylist .entry-item .item-desc strong.title {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (max-width: 869.98px) {
+  .entrylist .entry-item {
+    display: block;
+  }
+  .entrylist .entry-item .item-desc {
+    padding: 0;
+  }
+  .entrylist .entry-item .item-desc strong.title {
+    margin-top: 1rem;
+  }
 }
 
 .entrylist.layout-1 .entry-item .item-image img {
@@ -16485,71 +16503,17 @@ blockquote p {
   padding-left: 1rem;
 }
 
-.entrylist.layout-1 .entry-item .item-desc strong.title {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.entrylist.layout-1.widget .entry-item .item-image img {
-  width: 180px;
-}
-
 @media (max-width: 869.98px) {
-  .entrylist.layout-1 .entry-item {
-    display: block;
-  }
   .entrylist.layout-1 .entry-item .item-image img {
     width: 100% !important;
   }
   .entrylist.layout-1 .entry-item .item-desc {
     padding: 0;
   }
-  .entrylist.layout-1 .entry-item .item-desc strong.title {
-    margin-top: 1rem;
-  }
-}
-
-.entrylist.layout-2 {
-  display: flex;
-  flex-flow: column;
-}
-
-.entrylist.layout-2 .entry-item {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid #ECF0F1;
-  padding: 1rem 0 1rem 0;
-}
-
-.entrylist.layout-2 .entry-item:first-child {
-  border-top: 1px solid #ECF0F1;
 }
 
 .entrylist.layout-2 .entry-item .item-image {
   display: none;
-}
-
-.entrylist.layout-2 .entry-item .item-desc strong.title {
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.entrylist.layout-2.widget .entry-item .item-image img {
-  width: 180px;
-}
-
-@media (max-width: 869.98px) {
-  .entrylist.layout-2 .entry-item {
-    display: block;
-  }
-  .entrylist.layout-2 .entry-item .item-image img {
-    width: 100% !important;
-  }
-  .entrylist.layout-2 .entry-item .item-desc {
-    padding: 0;
-  }
 }
 
 .site-header {
@@ -16677,6 +16641,26 @@ blockquote p {
   }
 }
 
+.page footer {
+  display: flex;
+  background-color: #ECF0F1;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.page footer div {
+  flex: 1;
+}
+
+.page footer .tags {
+  margin: 0;
+}
+
+.page footer .entry-info {
+  text-align: right;
+  font-size: 12px;
+}
+
 .page .backlink {
   position: absolute;
   right: 2rem;
@@ -16701,26 +16685,6 @@ blockquote p {
 
 .page-entrylist .entry-filters .filter-button:hover, .page-entrylist .entry-filters .filter-button.active {
   background-color: #E74C3C;
-}
-
-.page-entry footer {
-  display: flex;
-  background-color: #ECF0F1;
-  align-items: center;
-  padding: 10px 5px;
-}
-
-.page-entry footer div {
-  flex: 1;
-}
-
-.page-entry footer .tags {
-  margin: 0;
-}
-
-.page-entry footer .entry-info {
-  text-align: right;
-  font-size: 12px;
 }
 
 .page-entry .entry-detail {
@@ -16748,32 +16712,6 @@ blockquote p {
   margin: 0;
 }
 
-.page-entry .entry-detail .detail-gallerie {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  position: relative;
-  border-top: 1px solid #ECF0F1;
-  padding-top: 1rem;
-  margin-top: 1rem;
-}
-
-.page-entry .entry-detail .detail-gallerie > article {
-  cursor: pointer;
-  height: 190px;
-  width: 25%;
-  background-size: cover;
-  background-position: center center;
-  border: 8px solid #ffffff;
-}
-
-@media (max-width: 991.98px) {
-  .page-entry .entry-detail .detail-gallerie > article {
-    height: 150px;
-  }
-}
-
 @media (max-width: 869.98px) {
   .page-entry .entry-detail .detail-preview {
     display: block;
@@ -16785,15 +16723,15 @@ blockquote p {
     padding: 0;
     margin-top: 1rem;
   }
-  .page-entry .entry-detail .detail-gallerie > article {
-    width: 50%;
-  }
 }
 
-@media (max-width: 575.98px) {
-  .page-entry .entry-detail .detail-gallerie > article {
-    height: 130px;
-  }
+.page .modular {
+  padding: 0 !important;
+  margin-bottom: 1rem;
+}
+
+.page .modular h2.heading {
+  margin-bottom: 1rem !important;
 }
 
 .modular {
@@ -16833,8 +16771,73 @@ blockquote p {
   margin: 1rem 0 0 0;
 }
 
+.modular-text {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.modular-text h2.heading {
+  margin-top: 1rem;
+}
+
+.modular-gallery {
+  border-top: 1px solid #ECF0F1;
+  border-bottom: 1px solid #ECF0F1;
+}
+
+.modular-gallery h2.heading {
+  padding-top: 1rem;
+}
+
+.modular-gallery .gallery {
+  margin-left: -8px;
+  margin-right: -8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.modular-gallery .gallery > article {
+  cursor: pointer;
+  height: 190px;
+  width: 25%;
+  background-size: cover;
+  background-position: center center;
+  border: 8px solid #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .modular-gallery .gallery > article {
+    height: 150px;
+  }
+}
+
+@media (max-width: 869.98px) {
+  .modular-gallery .gallery > article {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .modular-gallery .gallery > article {
+    height: 130px;
+  }
+}
+
+.modular-education {
+  margin-bottom: 1rem;
+}
+
 .modular-education div:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.modular-skills .intro p {
+  margin-top: 0;
 }
 
 .modular-skills .content div:not(:last-child) {
@@ -16850,6 +16853,61 @@ blockquote p {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
+}
+
+/* ##################################
+ Layout
+###################################*/
+.sidebar .modular-gallery {
+  border: 0;
+}
+
+.sidebar .modular-gallery h2.heading {
+  padding-top: 0;
+}
+
+.sidebar .modular-gallery .gallery {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .modular-gallery .gallery > article {
+  width: 100%;
+  border: 0;
+}
+
+.sidebar .modular-gallery .gallery > article:not(last-child) {
+  margin-bottom: 8px;
+}
+
+.main .modular-gallery {
+  border: 0;
+}
+
+.main .modular-gallery h2.heading {
+  padding-top: 0;
+}
+
+.main .modular-gallery .gallery {
+  margin: 0;
+  padding: 0;
+}
+
+.main .modular-gallery .gallery > article {
+  width: 50%;
+  border: 0;
+}
+
+.main .modular-gallery .gallery > article:nth-child(odd) {
+  border-right: 4px solid #ffffff;
+}
+
+.main .modular-gallery .gallery > article:nth-child(even) {
+  border-left: 4px solid #ffffff;
+}
+
+.main .modular-gallery .gallery > article:nth-child(n+3) {
+  margin-top: 8px;
 }
 
 .btn {

@@ -1,21 +1,42 @@
 {% extends 'partials/base.html.twig' %}
 
-{% block main %}
+{% block content %}
 
-  {% for module in page.collection() %}
-      {% if module.header.position == 'main' %}
+  <section class="page page-entry">
+    <h2 class="heading">{{ page.header.title }}</h2>
+    <a href="{{ base_url_absolute }}{{ page.parent().url() }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
+    <article class="entry-detail content">
+      <article class="detail-preview">
+        <div class="preview-image">
+          {% if page.header.preview.image %}
+            {% set preview_image = page.header.preview.image | first %}
+            <img src="{{ base_url_absolute }}/{{ preview_image.path }}" alt="Vorschau Bild">
+          {% else %}
+            <img src="{{ theme_url }}/images/default_image.jpg">
+          {% endif %}
+        </div>
+        <div class="preview-desc">
+          <p>{{ page.header.preview.text }}</p>
+        </div>
+      </article>
+      {% for module in page.collection() %}
         {{ module.content }}
-      {% endif %}
-  {% endfor %}
+      {% endfor %}
+      <footer>
+        {% if  page.header.tags %}
+          <div class="tags">
 
-{% endblock %}
-
-{% block aside %}
-
-    {% for module in page.collection() %}
-        {% if module.header.position == 'sidebar' %}
-            {{ module.content }}
+            <small>Tags: </small>
+            {% for tag in page.header.tags %}
+              <span class="entry-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
         {% endif %}
-    {% endfor %}
+        <div class="entry-info">
+          <strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('d. m. Y') }}
+        </div>
+      </footer>
+    </article>
+  </section>
 
 {% endblock %}

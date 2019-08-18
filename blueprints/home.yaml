@@ -1,4 +1,4 @@
-title: modular
+title: home
 
 form:
   fields:
@@ -15,28 +15,6 @@ form:
               type: text
               autofocus: true
               label: THEME_SIMPLICITY.GLOBAL.FIELDS.TITLE.LABEL
-            header.tags:
-              type: selectize
-              label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.TAGS.LABEL
-              classes: fancy
-              help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
-              validate:
-                type: commalist
-            preview:
-              type: section
-              title: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.LABEL
-              underline: true
-              fields:
-                header.preview.image:
-                  type: file
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.FIELDS.IMAGE.LABEL
-                  destination: '@self/preview'
-                header.preview.text:
-                  type: textarea
-                  rows: 6
-                  label: THEME_SIMPLICITY.PAGES.PROJECTITEM.FIELDS.SECTION.VORSCHAU.FIELDS.TEXT.LABEL
-                  validate:
-                    required: true
             modular:
               type: section
               title: "Modular"

@@ -109,44 +109,49 @@ blockquote{
   }
 }
 .entrylist{
-  &.layout-1{
+  display: flex;
+  flex-flow: column;
+  .entry-item{
     display: flex;
-    flex-flow: column;
-    .entry-item{
-      display: flex;
-      width: 100%;
-      border-bottom: 1px solid $color3;
-      padding: 1rem 0 1rem 0;
-      &:first-child{
-        border-top: 1px solid $color3;
+    width: 100%;
+    border-bottom: 1px solid $color3;
+    padding: 1rem 0 1rem 0;
+    &:first-child{
+      border-top: 1px solid $color3;
+    }
+    .item-desc{
+      strong.title{
+        font-family: $font1;
+        margin-bottom: 1rem;
+        display: block;
       }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .entry-item{
+      display: block;
+      .item-desc{
+        padding: 0;
+        strong.title{
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  &.layout-1{
+    .entry-item{
       .item-image{
         img{
           width: 250px;
         }
       }
       .item-desc{
-        strong.title{
-          font-family: $font1;
-          margin-bottom: 1rem;
-          display: block;
-        }
         padding-left: 1rem;
-      }
-    }
-
-    &.widget{
-      .entry-item{
-        .item-image{
-          img{
-            width: 180px;
-          }
-        }
       }
     }
     @include media-breakpoint-down(sm) {
       .entry-item{
-        display: block;
         .item-image{
           img{
             width: 100% !important;
@@ -154,56 +159,14 @@ blockquote{
         }
         .item-desc{
           padding: 0;
-          strong.title{
-            margin-top: 1rem;
-          }
         }
       }
     }
   }
   &.layout-2{
-    display: flex;
-    flex-flow: column;
     .entry-item{
-      display: flex;
-      width: 100%;
-      border-bottom: 1px solid $color3;
-      padding: 1rem 0 1rem 0;
-      &:first-child{
-        border-top: 1px solid $color3;
-      }
       .item-image{
         display: none;
-      }
-      .item-desc{
-        strong.title{
-          font-family: $font1;
-          margin-bottom: 1rem;
-          display: block;
-        }
-      }
-    }
-
-    &.widget{
-      .entry-item{
-        .item-image{
-          img{
-            width: 180px;
-          }
-        }
-      }
-    }
-    @include media-breakpoint-down(sm) {
-      .entry-item{
-        display: block;
-        .item-image{
-          img{
-            width: 100% !important;
-          }
-        }
-        .item-desc{
-          padding: 0;
-        }
       }
     }
   }
@@ -324,6 +287,22 @@ blockquote{
       max-width: 250px;
     }
   }
+  footer{
+    display: flex;
+    background-color: $color3;
+    align-items: center;
+    padding: 10px 5px;
+    div{
+      flex: 1;
+    }
+    .tags{
+      margin: 0;
+    }
+    .entry-info{
+      text-align: right;
+      font-size: 12px;
+    }
+  }
   .backlink{
     position: absolute;
     right: 2rem;
@@ -350,22 +329,6 @@ blockquote{
     }
   }
   &-entry{
-    footer{
-      display: flex;
-      background-color: $color3;
-      align-items: center;
-      padding: 10px 5px;
-      div{
-        flex: 1;
-      }
-      .tags{
-        margin: 0;
-      }
-      .entry-info{
-        text-align: right;
-        font-size: 12px;
-      }
-    }
     .entry-detail{
       display: flex;
       flex-flow: column;
@@ -387,35 +350,6 @@ blockquote{
           }
         }
       }
-      .detail-detail{
-
-      }
-      .detail-gallerie{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        position: relative;
-        border-top: 1px solid $color3;
-        padding-top: 1rem;
-        margin-top: 1rem;
-        > article{
-          cursor: pointer;
-          height: 190px;
-          width: 25%;
-          background-size: cover;
-          background-position: center center;
-          border: 8px solid $color6;
-
-        }
-      }
-      @include media-breakpoint-down(md) {
-        .detail-gallerie{
-          > article{
-            height: 150px;
-          }
-        }
-      }
       @include media-breakpoint-down(sm) {
         .detail-preview{
           display: block;
@@ -429,19 +363,16 @@ blockquote{
             margin-top: 1rem;
           }
         }
-        .detail-gallerie{
-          > article{
-            width: 50%;
-          }
-        }
       }
-      @include media-breakpoint-down(xs) {
-        .detail-gallerie{
-          > article{
-            height: 130px;
-          }
-        }
-      }
+
+    }
+  }
+  & .modular{
+    padding: 0 !important;
+    margin-bottom: 1rem;
+
+    h2.heading{
+      margin-bottom: 1rem !important;
     }
   }
 }
@@ -477,12 +408,76 @@ blockquote{
       margin: 1rem 0 0 0;
     }
   }
+  &-text{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .content{
+    }
+    h2.heading{
+      margin-top: 1rem;
+    }
+  }
+  &-gallery{
+    border-top: 1px solid $color3;
+    border-bottom: 1px solid $color3;
+    h2.heading{
+      padding-top: 1rem;
+    }
+    .gallery{
+      margin-left: -8px;
+      margin-right: -8px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      position: relative;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      > article{
+        cursor: pointer;
+        height: 190px;
+        width: 25%;
+        background-size: cover;
+        background-position: center center;
+        border: 8px solid $color6;
+
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .gallery{
+        > article{
+          height: 150px;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .gallery{
+        > article{
+          width: 50%;
+        }
+      }
+    }
+    @include media-breakpoint-down(xs) {
+      .gallery{
+        > article{
+          height: 130px;
+        }
+      }
+    }
+  }
   &-education{
+
+    margin-bottom: 1rem;
     div:not(:last-child){
       margin-bottom: 1rem;
     }
   }
   &-skills{
+    .intro{
+      p{
+        margin-top: 0;
+      }
+    }
     .content{
       div:not(:last-child){
         margin-bottom: 1rem;
@@ -491,7 +486,6 @@ blockquote{
         background-color: $color4;
       }
     }
-
   }
   &-entrylist{
     .btn{
@@ -499,6 +493,56 @@ blockquote{
       color: #fff;
       background-color: #dc3545;
       border-color: #dc3545;
+    }
+  }
+}
+
+/* ##################################
+ Layout
+###################################*/
+
+.sidebar{
+  .modular-gallery{
+    border: 0;
+    h2.heading{
+      padding-top:0;
+    }
+    .gallery{
+      margin: 0;
+      padding: 0;
+      > article{
+        width: 100%;
+        border: 0;
+        &:not(last-child){
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+.main{
+  .modular-gallery{
+    border: 0;
+    h2.heading{
+      padding-top:0;
+    }
+    .gallery{
+      margin: 0;
+      padding: 0;
+      > article{
+        width: 50%;
+        border: 0;
+        &:nth-child(odd){
+          border-right: 4px solid $color6;
+        }
+        &:nth-child(even){
+          border-left: 4px solid $color6;
+        }
+        &:nth-child(n+3) {
+          margin-top: 8px;
+        }
+      }
     }
   }
 }
