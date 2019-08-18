@@ -1,5 +1,5 @@
 ---
-title: 'Neuste Blog Einträge'
+title: 'Latest blogs'
 position: sidebar
 reference: /blog
 count: '2'
