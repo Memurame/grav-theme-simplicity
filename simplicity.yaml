@@ -1,7 +1,7 @@
 enabled: true
 header:
   name: 'Hans Müller'
-  subtitle: Web-Entwickler
+  subtitle: Web-Developer
   social:
     github: 'https://github.com/mueller'
     facebook: 'https://facebook.com'

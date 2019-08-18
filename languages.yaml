@@ -170,7 +170,7 @@ en:
                 LABEL: "Company"
               DATE:
                 LABEL: "Employment duration"
-                DESCRIPTION: "BeispielExample: `2018-2019`"
+                DESCRIPTION: "Example: `2018-2019`"
               TEXT:
                 LABEL: "Description"
       PROJECTS:

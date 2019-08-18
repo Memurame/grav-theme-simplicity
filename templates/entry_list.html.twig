@@ -9,7 +9,7 @@
           <button data-filter="" class="filter-button active">Alle</button>
       </div>
       <article class="entrylist layout-{{ page.header.layout }}">
-          {% for item in page.children() %}
+          {% for item in page.children().published() %}
 
               <article class="entry-item {{ item.header.tags | join(' ') }}">
                   <div class="item-image">

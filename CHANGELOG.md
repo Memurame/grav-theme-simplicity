@@ -1,3 +1,11 @@
+# v0.0.13
+## 18-08-2019
+
+1. [](#bugfix)
+    * Consider the number of entries that have been set
+   [](#improved)
+    * demo pages in english without locale
+
 # v0.0.12
 ## 17-08-2019
 
