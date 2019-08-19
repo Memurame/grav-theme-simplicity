@@ -34,17 +34,16 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
-    let youtube = $('.youtube-iframe');
-    let youtubeheight = youtube.width() * 9/16;
-    $('.youtube-iframe').css('height', youtubeheight);
+    $(window).on('resize',function() {
+        let youtube = $('.youtube-iframe');
+        let youtubeheight = youtube.width() * 10/16;
+        $('.youtube-iframe').css('height', youtubeheight);
 
+        $('.gallery').find('article').each(function(i, v){
+            let imageheight = $(this).width() * 3/4;
+            $(this).css('height', imageheight);
+        });
+    }).trigger('resize');
 
-
-});
-
-$( window ).resize(function(){
-    let youtube = $('.youtube-iframe');
-    let youtubeheight = youtube.width() * 9/16;
-    $('.youtube-iframe').css('height', youtubeheight);
 });
 

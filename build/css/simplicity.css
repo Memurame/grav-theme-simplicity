@@ -16810,21 +16810,9 @@ blockquote p {
   border: 8px solid #ffffff;
 }
 
-@media (max-width: 991.98px) {
-  .modular-gallery .gallery > article {
-    height: 150px;
-  }
-}
-
 @media (max-width: 869.98px) {
   .modular-gallery .gallery > article {
     width: 50%;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .modular-gallery .gallery > article {
-    height: 130px;
   }
 }
 

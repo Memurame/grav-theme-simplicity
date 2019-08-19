@@ -5,8 +5,10 @@
     * update readme
     * update language
     * update demo pages
+    * update error page
    [](#new)
     * new youtube modul
+    * scales the picture and video ratio with js
 
 # v0.0.14
 ## 18-08-2019

@@ -1,12 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div id="error">
-		<div>
-			<h1>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h1>
-			<p>
-				{{ page.content }}
-			</p>
-		</div>
-	</div>
+	<section class="page page-error">
+		<h2 class="heading">{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h2>
+		<a href="{{ home_url }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
+		<article class="content">
+			{{ page.content }}
+		</article>
+	</section>
 {% endblock %}
+
