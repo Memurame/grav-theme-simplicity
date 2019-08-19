@@ -21,7 +21,9 @@ form:
               fields:
                 header.youtube:
                   type: text
-                  label: "URL des Youtube Videos"
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.YOUTUBE.LABEL
+                  description: THEME_SIMPLICITY.ADMIN.FIELDS.YOUTUBE.DESCRIPTION
+                  markdown: true
                   validate:
                     required: true
             settings:

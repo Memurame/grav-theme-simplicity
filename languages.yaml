@@ -89,6 +89,9 @@ de:
           LABEL: "Bild"
         PREVIEW_TEXT:
           LABEL: "Kurze Einleitung"
+        YOUTUBE:
+          LABEL: "Video ID eingeben"
+          DESCRIPTION: "Beispiel: `VkvUH8vRQfE`"
 en:
   THEME_SIMPLICITY:
     FRONTEND:
@@ -180,6 +183,9 @@ en:
           LABEL: "Image"
         PREVIEW_TEXT:
           LABEL: "Short description"
+        YOUTUBE:
+          LABEL: "Enter video ID"
+          DESCRIPTION: "Example: `VkvUH8vRQfE`"
 
 
 

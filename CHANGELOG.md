@@ -4,6 +4,7 @@
 1. [](#improved)
     * update readme
     * update language
+    * update demo pages
    [](#new)
     * new youtube modul
 

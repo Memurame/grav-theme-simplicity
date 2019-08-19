@@ -34,6 +34,17 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    let youtube = $('.youtube-iframe');
+    let youtubeheight = youtube.width() * 9/16;
+    $('.youtube-iframe').css('height', youtubeheight);
+
 
 
 });
+
+$( window ).resize(function(){
+    let youtube = $('.youtube-iframe');
+    let youtubeheight = youtube.width() * 9/16;
+    $('.youtube-iframe').css('height', youtubeheight);
+});
+
