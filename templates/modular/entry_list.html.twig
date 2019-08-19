@@ -1,6 +1,7 @@
 {% set projectpage = page.find(page.header.reference) %}
 
 
+
 <section class="modular modular-entrylist">
     <h2 class="heading">{{ page.header.title }}</h2>
     <article class="content entrylist widget layout-{{ page.header.layout }}">
@@ -24,7 +25,7 @@
                         <p>{{ item.header.preview.text }}</p>
                     {% endif %}
 
-                    {% if  item.header.tags and page.header.showtags %}
+                    {% if item.header.tags and page.header.showtags %}
                         <div class="tags">
 
                             <small>Tags: </small>
@@ -34,6 +35,9 @@
                         </div>
                     {% endif %}
                     <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
+                </div>
+                <div class="item-date">
+                    {{ page.date() | date('d. m. Y') }}
                 </div>
             </article>
 

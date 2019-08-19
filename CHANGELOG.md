@@ -6,6 +6,7 @@
     * update language
     * update demo pages
     * update error page
+    * fixe some css bugs
    [](#new)
     * new youtube modul
     * scales the picture and video ratio with js

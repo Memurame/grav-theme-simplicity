@@ -111,20 +111,28 @@ blockquote{
 .entrylist{
   display: flex;
   flex-flow: column;
+  border-top: 1px solid $color3;
   .entry-item{
     display: flex;
     width: 100%;
     border-bottom: 1px solid $color3;
     padding: 1rem 0 1rem 0;
-    &:first-child{
-      border-top: 1px solid $color3;
-    }
+    position: relative;
+
     .item-desc{
       strong.title{
         font-family: $font1;
         margin-bottom: 1rem;
         display: block;
       }
+    }
+    .item-date{
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 12px;
+      background-color: $color3;
+      padding: 0 4px;
     }
   }
   @include media-breakpoint-down(sm) {
@@ -311,6 +319,7 @@ blockquote{
   &-entrylist{
     .entry-filters{
       margin-bottom: 1rem;
+
       .filter-button{
         position: relative;
         border: 0;

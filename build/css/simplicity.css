@@ -16464,6 +16464,7 @@ blockquote p {
 .entrylist {
   display: flex;
   flex-flow: column;
+  border-top: 1px solid #ECF0F1;
 }
 
 .entrylist .entry-item {
@@ -16471,16 +16472,22 @@ blockquote p {
   width: 100%;
   border-bottom: 1px solid #ECF0F1;
   padding: 1rem 0 1rem 0;
-}
-
-.entrylist .entry-item:first-child {
-  border-top: 1px solid #ECF0F1;
+  position: relative;
 }
 
 .entrylist .entry-item .item-desc strong.title {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
   display: block;
+}
+
+.entrylist .entry-item .item-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  background-color: #ECF0F1;
+  padding: 0 4px;
 }
 
 @media (max-width: 869.98px) {
