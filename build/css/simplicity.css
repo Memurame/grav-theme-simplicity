@@ -16648,6 +16648,16 @@ blockquote p {
   }
 }
 
+.page h2.heading {
+  margin-bottom: 0.5rem;
+}
+
+.page .date {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
 .page footer {
   display: flex;
   background-color: #ECF0F1;
@@ -16666,6 +16676,14 @@ blockquote p {
 .page footer .entry-info {
   text-align: right;
   font-size: 12px;
+}
+
+.page footer .share {
+  text-align: right;
+}
+
+.page footer .share a img {
+  width: 24px;
 }
 
 .page .backlink {
@@ -16873,6 +16891,10 @@ blockquote p {
 
 .sidebar .modular-gallery .gallery > article:not(last-child) {
   margin-bottom: 8px;
+}
+
+.main .entrylist .entry-item .item-image img {
+  width: 180px;
 }
 
 .main .modular-gallery {

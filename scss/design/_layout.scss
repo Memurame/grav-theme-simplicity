@@ -295,6 +295,14 @@ blockquote{
       max-width: 250px;
     }
   }
+  h2.heading{
+    margin-bottom: 0.5rem;
+  }
+  .date{
+    font-size: 12px;
+    display:block;
+    margin-bottom: 0.5rem;
+  }
   footer{
     display: flex;
     background-color: $color3;
@@ -309,6 +317,14 @@ blockquote{
     .entry-info{
       text-align: right;
       font-size: 12px;
+    }
+    .share{
+      text-align: right;
+      a{
+        img{
+          width: 24px;
+        }
+      }
     }
   }
   .backlink{
@@ -518,6 +534,15 @@ blockquote{
 }
 
 .main{
+  .entrylist{
+    .entry-item{
+      .item-image{
+        img{
+          width: 180px;
+        }
+      }
+    }
+  }
   .modular-gallery{
     border: 0;
     h2.heading{

@@ -1,6 +1,6 @@
 name: "Simplicity"
-version: 0.0.15
-description: "A simple design with which you can make your own portfolio. Modular page layout and separate project overview and detail page"
+version: 0.0.16
+description: "This theme for the Grav CMS is a simple and clear modular design. This is primarily used to create a portfolio of yours. You can also use this to introduce your projects to the public or to run a blog."
 icon: id-card-o
 keywords: portfolio, modular, simple, project, responsive, theme, modern
 author:
@@ -13,6 +13,7 @@ license: MIT
 demo: https://demo.hirter.dev/grav/simplicity
 dependencies:
   - { name: grav, version: '>=1.6.0' }
+  - { name: tools-collection, version: '>=0.1.0' }
 form:
   validation: loose
   fields:
@@ -27,26 +28,26 @@ form:
           fields:
             pers:
               type: section
-              title: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.LABEL
+              title: THEME_SIMPLICITY.ADMIN.SECTION.PERSON
               underline: true
               fields:
                 header.name:
                   type: text
-                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.NAME.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.NAME.LABEL
                   validate:
                     required: true
                 header.subtitle:
                   type: text
-                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.SUBTITLE.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.SUBTITLE.LABEL
                   validate:
                     required: true
                 header.image:
                   type: file
-                  label: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.PERSON.FIELDS.IMAGE.LABEL
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PROFILE_IMAGE.LABEL
                   destination: 'user/themes/simplicity/images/custom'
             social:
               type: section
-              title: THEME_SIMPLICITY.CONFIG.FIELDS.SECTION.SOCIAL.LABEL
+              title: THEME_SIMPLICITY.ADMIN.SECTION.SOCIAL
               underline: true
               fields:
                 header.social.facebook:

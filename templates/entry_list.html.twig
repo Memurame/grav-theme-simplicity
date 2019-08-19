@@ -15,7 +15,7 @@
                   <div class="item-image">
                       {% if item.header.preview.image %}
                           {% set preview_image = item.header.preview.image | first %}
-                          <img src="{{ preview_image.path }}">
+                          {{ item.media[preview_image.name].cropZoom(600,450).html }}
                       {% else %}
                           <img src="{{ theme_url }}/images/default_image.jpg">
                       {% endif %}

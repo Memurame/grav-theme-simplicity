@@ -4,13 +4,14 @@
 
   <section class="page page-entry">
     <h2 class="heading">{{ page.header.title }}</h2>
+    <span class="date"><strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('d. m. Y') }}</span>
     <a href="{{ base_url_absolute }}{{ page.parent().url() }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
     <article class="entry-detail content">
       <article class="detail-preview">
         <div class="preview-image">
           {% if page.header.preview.image %}
             {% set preview_image = page.header.preview.image | first %}
-            <img src="{{ base_url_absolute }}/{{ preview_image.path }}" alt="Vorschau Bild">
+            {{ page.media[preview_image.name].cropZoom(600,450).html }}
           {% else %}
             <img src="{{ theme_url }}/images/default_image.jpg">
           {% endif %}
@@ -32,8 +33,11 @@
             {% endfor %}
           </div>
         {% endif %}
-        <div class="entry-info">
-          <strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('d. m. Y') }}
+        <div class="share d-none">
+          <a href="#"><img src="{{ theme_url }}/images/social/facebook.png"></a>
+          <a href="#"><img src="{{ theme_url }}/images/social/linkedin.png"></a>
+          <a href="#"><img src="{{ theme_url }}/images/social/twitter.png"></a>
+          <a href="#"><img src="{{ theme_url }}/images/social/google_plus.png"></a>
         </div>
       </footer>
     </article>

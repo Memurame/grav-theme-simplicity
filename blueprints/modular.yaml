@@ -29,7 +29,8 @@ form:
                 header.preview.image:
                   type: file
                   label: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-                  destination: '@self/preview'
+                  destination: '@self'
+                  description: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_IMAGE.DESCRIPTION
                 header.preview.text:
                   type: textarea
                   rows: 6

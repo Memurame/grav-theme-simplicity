@@ -13,6 +13,8 @@ de:
         SETTINGS: "Einstellugen"
         PREVIEW: "Vorschau"
         MODULAR: "Modular"
+        PERSON: "Person"
+        SOCIAL: "Soziale Medien"
       FIELDS:
         TITLE:
           LABEL: "Titel"
@@ -87,11 +89,18 @@ de:
           LABEL: "Kategorien"
         PREVIEW_IMAGE:
           LABEL: "Bild"
+          DESCRIPTION: "Die Bilder werden im Verhältnis 4:3 verkleinert und zugeschnitten."
         PREVIEW_TEXT:
           LABEL: "Kurze Einleitung"
         YOUTUBE:
           LABEL: "Video ID eingeben"
           DESCRIPTION: "Beispiel: `VkvUH8vRQfE`"
+        NAME:
+          LABEL: "Dein Name"
+        SUBTITLE:
+          LABEL: "Dein Beruf"
+        PROFILE_IMAGE:
+          LABEL: "Dein Profilebild"
 en:
   THEME_SIMPLICITY:
     FRONTEND:
@@ -181,6 +190,7 @@ en:
           LABEL: "Tags"
         PREVIEW_IMAGE:
           LABEL: "Image"
+          DESCRIPTION: "The pictures are reduced in a ratio of 4: 3 and cropped."
         PREVIEW_TEXT:
           LABEL: "Short description"
         YOUTUBE:

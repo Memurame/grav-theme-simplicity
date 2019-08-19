@@ -1,3 +1,15 @@
+# v0.0.16
+## 18-08-2019
+
+1. [](#bugfix)
+    * fix language
+    * fix loop in modular entry list
+   [](#improved)   
+    * change preview image path
+    * Plugin requirements added for tools-collection
+   [](#new)
+    * prepare share buttons
+
 # v0.0.15
 ## 19-08-2019
 
