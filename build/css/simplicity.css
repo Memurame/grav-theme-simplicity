@@ -16366,7 +16366,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-h2.heading {
+h2.heading, h1.heading {
   margin-bottom: 2rem;
 }
 
@@ -16475,10 +16475,11 @@ blockquote p {
   position: relative;
 }
 
-.entrylist .entry-item .item-desc strong.title {
+.entrylist .entry-item .item-desc h2.title {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
   display: block;
+  font-size: 1rem;
 }
 
 .entrylist .entry-item .item-date {
@@ -16493,11 +16494,12 @@ blockquote p {
 @media (max-width: 869.98px) {
   .entrylist .entry-item {
     display: block;
+    padding-top: 1.5rem;
   }
   .entrylist .entry-item .item-desc {
     padding: 0;
   }
-  .entrylist .entry-item .item-desc strong.title {
+  .entrylist .entry-item .item-desc h2.title {
     margin-top: 1rem;
   }
 }
@@ -16523,9 +16525,15 @@ blockquote p {
   display: none;
 }
 
+.site-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
 .site-header {
   border-top: 8px solid #3498DB;
-  width: 100vw;
+  width: 100%;
   height: 258px;
   background-color: #ffffff;
   padding: 35px 0;
@@ -16549,14 +16557,20 @@ blockquote p {
   margin-left: 2rem;
 }
 
-.site-header .header-container .header-info h1.name {
+.site-header .header-container .header-info span {
+  line-height: 1.2;
+  display: block;
+}
+
+.site-header .header-container .header-info .name {
   font-family: "Montserrat", sans-serif;
   color: #2C3E50;
   font-size: 38px;
   font-weight: 700;
+  margin-bottom: 16px;
 }
 
-.site-header .header-container .header-info h2.desc {
+.site-header .header-container .header-info .desc {
   font-family: "Lato", sans-serif;
   color: #646464;
   font-size: 24px;
@@ -16617,6 +16631,10 @@ blockquote p {
   }
 }
 
+.site-content {
+  flex: 1;
+}
+
 .site-footer {
   width: 100%;
   background-color: #2C3E50;
@@ -16648,7 +16666,7 @@ blockquote p {
   }
 }
 
-.page h2.heading {
+.page h1.heading {
   margin-bottom: 0.5rem;
 }
 
@@ -16663,14 +16681,12 @@ blockquote p {
   background-color: #ECF0F1;
   align-items: center;
   padding: 10px 5px;
-}
-
-.page footer div {
-  flex: 1;
+  justify-content: flex-end;
 }
 
 .page footer .tags {
   margin: 0;
+  flex: 1;
 }
 
 .page footer .entry-info {
@@ -16682,8 +16698,31 @@ blockquote p {
   text-align: right;
 }
 
-.page footer .share a img {
+.page footer .share button {
+  border: 0;
+  padding: 0;
+  outline-style: none;
+}
+
+.page footer .share button img {
   width: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .page footer {
+    display: block;
+  }
+  .page footer div {
+    min-height: 32px;
+  }
+  .page footer .tags {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2C3E50;
+  }
+  .page footer .share button img {
+    width: 32px;
+  }
 }
 
 .page .backlink {
@@ -16693,7 +16732,7 @@ blockquote p {
 }
 
 .page-entrylist .entry-filters {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .page-entrylist .entry-filters .filter-button {
@@ -16705,7 +16744,7 @@ blockquote p {
   display: inline-block;
   color: #ffffff;
   outline-style: none;
-  margin-right: 4px;
+  margin: 4px 4px 4px 0;
 }
 
 .page-entrylist .entry-filters .filter-button:hover, .page-entrylist .entry-filters .filter-button.active {

@@ -1,5 +1,5 @@
 <!-- This Grav Theme was build by Tom Hirter -->
-<!-- https://hitrer.dev or https://github.com/Memurame -->
+<!-- https://hirter.dev or https://github.com/memurame -->
 
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
@@ -25,11 +25,12 @@
 
     </head>
     <body>
+        <div class="site-wrapper">
         {% block header %}
             {% include 'partials/header.html.twig' %}
         {% endblock %}
 
-        <div class="content-wrapper container">
+        <div class="site-content container">
             <div class="row">
                 {% if page.template() == 'home' %}
                     <main class="col-md-8 col-sm-12 col-xs-12 main">
@@ -49,7 +50,7 @@
             {%  include 'partials/footer.html.twig' %}
         {% endblock %}
 
-
+        </div>
 
 
         {% block javascripts %}

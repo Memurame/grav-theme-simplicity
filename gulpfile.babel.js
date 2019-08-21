@@ -78,7 +78,8 @@ const files = {
       path.src.core.js + 'sweetalert2.all.min.js',
       path.src.core.js + 'bootstrap.bundle.min.js',
       path.src.core.js + 'lightgallery.js',
-      path.src.core.js + 'isotope.pkgd.js'
+      path.src.core.js + 'isotope.pkgd.js',
+      path.src.core.js + 'sharer.min.js'
     ]
   },
   scss: {
@@ -147,6 +148,11 @@ const dependencies = {
     lightgallery: {
       base: path.src.core.js + '/lightgallery.js',
       src: 'node_modules/lightgallery/dist/js/lightgallery.js',
+      dest: path.src.core.js
+    },
+    sharer: {
+      base: path.src.core.js + '/sharer.min.js',
+      src: 'node_modules/sharer.js/sharer.min.js',
       dest: path.src.core.js
     }
 

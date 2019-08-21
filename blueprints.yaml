@@ -14,6 +14,7 @@ demo: https://demo.hirter.dev/grav/simplicity
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - { name: tools-collection, version: '>=0.1.0' }
+  - { name: auto-date, version: '>=1.0.2' }
 form:
   validation: loose
   fields:

@@ -2,19 +2,22 @@
 
 
 
-<section class="modular modular-entrylist">
+<article class="modular modular-entrylist">
     <h2 class="heading">{{ page.header.title }}</h2>
     <article class="content entrylist widget layout-{{ page.header.layout }}">
         {% for item in projectpage.children().published() | slice(0, page.header.count) %}
             <article class="entry-item">
-                <div class="item-image">
-                    {% if item.header.preview.image %}
-                        {% set preview_image = item.header.preview.image | first %}
-                        {{ item.media[preview_image.name].cropZoom(600,450).html }}
-                    {% else %}
-                        <img src="{{ theme_url }}/images/default_image.jpg">
-                    {% endif %}
-                </div>
+                {% if page.header.layout == 1 %}
+                    <div class="item-image">
+                        {% if item.header.preview.image %}
+                            {% set preview_image = item.header.preview.image | first %}
+                            {{ item.media[preview_image.name].cropZoom(600,450).html('', item.header.title) }}
+                        {% else %}
+                            <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
+                        {% endif %}
+
+                    </div>
+                {% endif %}
                 <div class="item-desc">
                     <strong class="title">{{ item.header.title }}</strong>
                     {% if page.header.slice %}
@@ -37,7 +40,7 @@
                     <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
                 </div>
                 <div class="item-date">
-                    {{ page.date() | date('d. m. Y') }}
+                    {{ item.date() | date('d. m. Y') }}
                 </div>
             </article>
 
@@ -45,4 +48,4 @@
         {% endfor %}
     </article>
     <a href="{{ base_url_absolute }}/{{ page.header.reference[1:] }}" class="btn btn-block"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.OTHERPROJEKT" | t  }}</a>
-</section>
+</article>

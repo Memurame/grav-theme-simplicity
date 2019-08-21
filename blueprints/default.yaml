@@ -1,4 +1,4 @@
-title: modular
+title: default
 
 form:
   fields:
@@ -14,30 +14,6 @@ form:
               type: text
               autofocus: true
               label: THEME_SIMPLICITY.ADMIN.FIELDS.TITLE.LABEL
-
-            header.tags:
-              type: selectize
-              label: THEME_SIMPLICITY.ADMIN.FIELDS.TAGS.LABEL
-              classes: fancy
-              help: PLUGIN_ADMIN.TAXONOMY_TYPES_HELP
-              validate:
-                type: commalist
-            preview:
-              type: section
-              title: THEME_SIMPLICITY.ADMIN.SECTION.PREVIEW
-              underline: true
-              fields:
-                header.preview.image:
-                  type: file
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_IMAGE.LABEL
-                  destination: '@self'
-                  description: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_IMAGE.DESCRIPTION
-                header.preview.text:
-                  type: textarea
-                  rows: 6
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PREVIEW_TEXT.LABEL
-                  validate:
-                    required: true
             content:
               type: section
               title: THEME_SIMPLICITY.ADMIN.SECTION.CONTENT
@@ -47,3 +23,5 @@ form:
                   type: markdown
                   validate:
                     type: textarea
+                header.media:
+                  type: pagemedia

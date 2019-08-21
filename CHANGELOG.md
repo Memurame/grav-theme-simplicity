@@ -4,11 +4,14 @@
 1. [](#bugfix)
     * fix language
     * fix loop in modular entry list
+    * date on entry list
    [](#improved)   
     * change preview image path
     * Plugin requirements added for tools-collection
+    * update html structure
+    * update alt tag on images
    [](#new)
-    * prepare share buttons
+    * add share buttons
 
 # v0.0.15
 ## 19-08-2019

@@ -2,11 +2,16 @@
     <div class="header-container container">
         <div class="header-profileimage">
             {% set image = theme_config.header.image | first %}
-            <div style="background-image: url('{{ theme_url }}/images/custom/{{ image.name }}')"></div>
+            <a href="{{ home_url }}"><div style="background-image: url('{{ theme_url }}/images/custom/{{ image.name }}')"></div></a>
         </div>
         <div class="header-info">
-            <h1 class="name">{{ theme_config.header.name }}</h1>
-            <h2 class="desc">{{ theme_config.header.subtitle }}</h2>
+            {% if page.template == 'home' %}
+                <h1 class="name">{{ theme_config.header.name }}</h1>
+                <h2 class="desc">{{ theme_config.header.subtitle }}</h2>
+            {% else %}
+                <span class="name">{{ theme_config.header.name }}</span>
+                <span class="desc">{{ theme_config.header.subtitle }}</span>
+            {% endif %}
             <div class="header-social">
                 <ul class="sociallinks">
                     {% if  theme_config.header.social.twitter %}

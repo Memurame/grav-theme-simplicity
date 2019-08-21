@@ -1,8 +1,8 @@
-<section class="modular modular-gallery">
+<article class="modular modular-gallery">
     {% if page.header.showtitle %}<h2 class="heading">{{ page.header.title }}</h2>{% endif %}
-    <article class="content gallery">
+    <div class="content gallery">
         {% for img in page.header.gallerie | split(',')%}
             <article style="background-image: url('{{ page.media[img].cropZoom(400,400).url }}')" data-src="{{ page.media[img].cropResize(1280,720).url }}"></article>
         {% endfor %}
-    </article>
-</section>
+    </div>
+</article>

@@ -5,6 +5,7 @@ de:
       OTHERPROJEKT: "Mehr Einträge"
       CREATED: "Erstellt"
       BACK: "zurück"
+      PREVIEW_IMAGE: "Vorschau Bild"
     ADMIN:
       TAB:
         CONTENT: "Inhalt"
@@ -108,6 +109,7 @@ en:
       OTHERPROJEKT: "Show more entries"
       CREATED: "Created"
       BACK: "back"
+      PREVIEW_IMAGE: "Preview inage"
     ADMIN:
       TAB:
         CONTENT: "Content"

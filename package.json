@@ -20,6 +20,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gulp": "^4.0.2",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.3.1",
     "lg-autoplay": "^1.0.4",
     "lg-fullscreen": "^1.1.0",
@@ -30,9 +31,9 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.12",
+    "sharer.js": "^0.3.8",
     "sweetalert2": "^8.8.7",
-    "vue": "^2.6.10",
-    "isotope-layout": "^3.0.6"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",

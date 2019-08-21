@@ -1,7 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block main %}
-
   {% for module in page.collection() %}
       {% if module.header.position == 'main' %}
         {{ module.content }}

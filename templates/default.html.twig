@@ -2,7 +2,7 @@
 
 {% block content %}
     <section class="page page-default">
-        <h2 class="heading">{{ page.header.title }}</h2>
+        <h1 class="heading">{{ page.header.title }}</h1>
         <span class="date"><strong>{{ "THEME_SIMPLICITY.FRONTEND.CREATED" | t  }}:</strong> {{ page.date() | date('d. m. Y') }}</span>
         <a href="{{ base_url_absolute }}{{ page.parent().url() }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
         <article class="content">
@@ -17,12 +17,7 @@
                         {% endfor %}
                     </div>
                 {% endif %}
-                <div class="share d-none">
-                    <a href="#"><img src="{{ theme_url }}/images/social/facebook.png"></a>
-                    <a href="#"><img src="{{ theme_url }}/images/social/linkedin.png"></a>
-                    <a href="#"><img src="{{ theme_url }}/images/social/twitter.png"></a>
-                    <a href="#"><img src="{{ theme_url }}/images/social/google_plus.png"></a>
-                </div>
+                {% include 'partials/socialshare.html.twig' %}
             </footer>
         </article>
     </section>
