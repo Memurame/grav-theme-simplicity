@@ -1,3 +1,8 @@
+# v1.0.1
+## 23-08-2019
+
+1. [](#bugfix)
+    * only modular pages in entry list
 # v1.0.0
 ## 18-08-2019
 

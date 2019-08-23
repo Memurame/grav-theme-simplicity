@@ -2,52 +2,53 @@
 
 {% block content %}
 
-  <section class="page page-entrylist">
-      <h1 class="heading">{{ page.header.title }}</h1>
-      <a href="{{ home_url }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
-      <div class="entry-filters">
+    <section class="page page-entrylist">
+        <h1 class="heading">{{ page.header.title }}</h1>
+        <a href="{{ home_url }}" class="backlink">{{ "THEME_SIMPLICITY.FRONTEND.BACK" | t  }}</a>
+        <div class="entry-filters">
           <button data-filter="" class="filter-button active">Alle</button>
-      </div>
-      <article class="content entrylist layout-{{ page.header.layout }}">
-          {% for item in page.children().published() %}
+        </div>
+        <article class="content entrylist layout-{{ page.header.layout }}">
+            {% for item in page.children().published() %}
+                {% if item.template() == 'modular' %}
 
-              <article class="entry-item {{ item.header.tags | join(' ') }}">
-                  {% if page.header.layout == 1 %}
-                      <div class="item-image">
-                          {% if item.header.preview.image %}
-                              {% set preview_image = item.header.preview.image | first %}
-                              {{ item.media[preview_image.name].cropZoom(600,450).html('', item.header.title) }}
-                          {% else %}
-                              <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
-                          {% endif %}
+                    <article class="entry-item {{ item.header.tags | join(' ') }}">
+                        {% if page.header.layout == 1 %}
+                            <div class="item-image">
+                              {% if item.header.preview.image %}
+                                  {% set preview_image = item.header.preview.image | first %}
+                                  {{ item.media[preview_image.name].cropZoom(600,450).html('', item.header.title) }}
+                              {% else %}
+                                  <img src="{{ theme_url }}/images/default_image.jpg" alt="{{ item.header.title }}">
+                              {% endif %}
 
-                      </div>
-                  {% endif %}
-                  <div class="item-desc">
-                      <h2 class="title">{{ item.header.title }}</h2>
-                      <p>{{ item.header.preview.text }}</p>
+                            </div>
+                        {% endif %}
+                        <div class="item-desc">
+                            <h2 class="title">{{ item.header.title }}</h2>
+                            <p>{{ item.header.preview.text }}</p>
 
-                      {% if  item.header.tags %}
-                          <div class="tags">
+                            {% if  item.header.tags %}
+                                <div class="tags">
 
-                              <small>Tags: </small>
-                              {% for tag in item.header.tags %}
-                                  <span class="entry-tag">{{ tag }}</span>
-                              {% endfor %}
-                          </div>
-                      {% endif %}
+                                  <small>Tags: </small>
+                                  {% for tag in item.header.tags %}
+                                      <span class="entry-tag">{{ tag }}</span>
+                                  {% endfor %}
+                                </div>
+                            {% endif %}
 
-                      <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
-                  </div>
-                  <div class="item-date">
-                      {{ item.date() | date('d. m. Y') }}
-                  </div>
-              </article>
-
+                            <a href="{{ item.url(true) }}"><i class="fas fa-external-link-alt"></i> {{ "THEME_SIMPLICITY.FRONTEND.PROJEKTLINK" | t  }}</a>
+                        </div>
+                        <div class="item-date">
+                            {{ item.date() | date('d. m. Y') }}
+                        </div>
+                    </article>
+                {% endif %}
 
           {% endfor %}
-      </article>
-  </section>
+        </article>
+    </section>
 
 {% endblock %}
 
