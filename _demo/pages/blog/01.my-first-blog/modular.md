@@ -9,6 +9,7 @@ content:
     order:
         by: folder
         dir: asc
+date: '11:59 18-08-2019'
 body_classes: modular
 page_container: container
 ---

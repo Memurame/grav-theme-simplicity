@@ -1,3 +1,11 @@
+# v1.0.2
+## 26-08-2019
+
+1. [](#bugfix)
+    * entry list ordered by date
+   [](#improved)  
+    * default.md changed rename header.text into content
+
 # v1.0.1
 ## 23-08-2019
 
