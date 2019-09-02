@@ -1,3 +1,9 @@
+# v1.0.3
+## 30-08-2019
+
+1. [](#bugfix)
+    * fix changelog
+
 # v1.0.2
 ## 26-08-2019
 
@@ -18,12 +24,12 @@
     * fix language
     * fix loop in modular entry list
     * date on entry list
-   [](#improved)   
+1. [](#improved)   
     * change preview image path
     * Plugin requirements added for tools-collection
     * update html structure
     * update alt tag on images
-   [](#new)
+1. [](#new)
     * add share buttons
 
 # v0.0.15
@@ -35,7 +41,7 @@
     * update demo pages
     * update error page
     * fixe some css bugs
-   [](#new)
+1. [](#new)
     * new youtube modul
     * scales the picture and video ratio with js
 
@@ -46,7 +52,7 @@
     * demo pages with the new page structure
     * page blueprints changed
     * the entry pages are now modular
-   [](#new)
+1. [](#new)
     * new gallery modul
 
 # v0.0.13
@@ -54,7 +60,7 @@
 
 1. [](#bugfix)
     * Consider the number of entries that have been set
-   [](#improved)
+1. [](#improved)
     * demo pages in english without locale
 
 # v0.0.12
@@ -76,12 +82,12 @@
 
 1. [](#bugfix)
     * back link on project pages
-   [](#new)
+1. [](#new)
     * added a tag filter on projectlist
     * tags for projects
     * Functions entered in the readme
     * translate frontend text
-   [](#improved)
+1. [](#improved)
     * Unused files deleted
     * Demo pages
     
