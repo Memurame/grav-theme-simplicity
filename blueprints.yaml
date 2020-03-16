@@ -10,7 +10,7 @@ author:
 homepage: https://github.com/Memurame/grav-theme-simplicity
 bugs: https://github.com/Memurame/grav-theme-simplicity/issues
 license: MIT
-demo: https://demo.hirter.dev/grav/simplicity
+demo: https://demo.hirter.dev/simplicity
 dependencies:
   - { name: grav, version: '>=1.6.0' }
   - { name: tools-collection, version: '>=0.1.0' }
@@ -76,8 +76,3 @@ form:
                   label: "Google+"
                   toggleable: true
                   placeholder: "https://facebook.com/hans.mueller"
-
-
-
-
-

@@ -1,4 +1,10 @@
 # v1.0.3
+## 16-03-2020
+
+1. [](#improved)
+    * Update demo link
+
+# v1.0.3
 ## 30-08-2019
 
 1. [](#bugfix)
@@ -76,7 +82,7 @@
 
 1. [](#improved)
     * rename blueprints
-    
+
 # v0.0.10
 ## 17-08-2019
 
@@ -90,8 +96,8 @@
 1. [](#improved)
     * Unused files deleted
     * Demo pages
-    
-    
+
+
 # v0.0.9
 ## 17-08-2019
 
