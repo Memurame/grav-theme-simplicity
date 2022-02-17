@@ -35,30 +35,30 @@ form:
       fields:
         inhalt:
           type: tab
-          title: Contents
+          title: THEME_SIMPLICITY.ADMIN.TAB.CONTENT
           fields:
             pers:
               type: section
-              title: Personal data
+              title: THEME_SIMPLICITY.ADMIN.SECTION.PERSON
               underline: true
               fields:
                 header.name:
                   type: text
-                  label: Full Name
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.NAME.LABEL
                   validate:
                     required: true
                 header.subtitle:
                   type: text
-                  label: Sub title
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.SUBTITLE.LABEL
                   validate:
                     required: true
                 header.image:
                   type: file
-                  label: Profile photo
+                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PROFILE_IMAGE.LABEL
                   destination: 'user/themes/simplicity/images/custom'
             social:
               type: section
-              title: Social media icons
+              title: THEME_SIMPLICITY.ADMIN.SECTION.SOCIAL
               underline: true
               fields:
                 header.social.facebook:
