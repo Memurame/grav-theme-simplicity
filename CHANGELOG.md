@@ -1,3 +1,14 @@
+# v2.0.0
+## 17-02-2022
+
+1. [](#improved)
+   * Updated to bootstrap 5
+   * Updated some dependencies
+   * Updated to latest Grav version (1.7.30)
+   * Style improvements
+2. [](#new)
+   * Toggleable menu (navigation)
+
 # v1.0.3
 ## 16-03-2020
 
