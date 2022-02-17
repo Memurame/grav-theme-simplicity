@@ -1,5 +1,5 @@
 name: "Simplicity"
-version: 1.0.3
+version: 2.0.0
 description: "This theme for the Grav CMS is a simple and clear modular design. This is primarily used to create a portfolio of yours. You can also use this to introduce your projects to the public or to run a blog."
 icon: id-card-o
 keywords: portfolio, modular, simple, project, responsive, theme, modern
@@ -18,6 +18,16 @@ dependencies:
 form:
   validation: loose
   fields:
+    menu:
+      type: toggle
+      label: Menu
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
     tabs:
       type: tabs
       active: 1
@@ -25,54 +35,54 @@ form:
       fields:
         inhalt:
           type: tab
-          title: Inhalt
+          title: Contents
           fields:
             pers:
               type: section
-              title: THEME_SIMPLICITY.ADMIN.SECTION.PERSON
+              title: Personal data
               underline: true
               fields:
                 header.name:
                   type: text
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.NAME.LABEL
+                  label: Full Name
                   validate:
                     required: true
                 header.subtitle:
                   type: text
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.SUBTITLE.LABEL
+                  label: Sub title
                   validate:
                     required: true
                 header.image:
                   type: file
-                  label: THEME_SIMPLICITY.ADMIN.FIELDS.PROFILE_IMAGE.LABEL
+                  label: Profile photo
                   destination: 'user/themes/simplicity/images/custom'
             social:
               type: section
-              title: THEME_SIMPLICITY.ADMIN.SECTION.SOCIAL
+              title: Social media icons
               underline: true
               fields:
                 header.social.facebook:
                   type: text
                   label: "Facebook"
                   toggleable: true
-                  placeholder: "https://facebook.com/hans.mueller"
+                  placeholder: "https://facebook.com/john.doe"
                 header.social.twitter:
                   type: text
                   label: "Twitter"
                   toggleable: true
-                  placeholder: "https://facebook.com/hans.mueller"
+                  placeholder: "https://facebook.com/john.doe"
                 header.social.linkedin:
                   type: text
                   label: "Linkedin"
                   toggleable: true
-                  placeholder: "https://facebook.com/hans.mueller"
+                  placeholder: "https://facebook.com/john.doe"
                 header.social.github:
                   type: text
                   label: "Github"
                   toggleable: true
-                  placeholder: "https://facebook.com/hans.mueller"
+                  placeholder: "https://facebook.com/john.doe"
                 header.social.google:
                   type: text
                   label: "Google+"
                   toggleable: true
-                  placeholder: "https://facebook.com/hans.mueller"
+                  placeholder: "https://facebook.com/john.doe"

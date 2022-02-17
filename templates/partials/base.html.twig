@@ -1,62 +1,75 @@
-<!-- This Grav Theme was build by Tom Hirter -->
-<!-- https://hirter.dev or https://github.com/memurame -->
-
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'de' }}">
-    <head>
-        {% block head %}
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="apple-mobile-web-app-capable" content="yes" />
-            {% include 'partials/metadata.html.twig' %}
-            <link rel="shortcut icon" href="/favicon.ico">
-            <link rel="icon" type="image/png" href="{{ url('theme://favicon.png') }}" sizes="32X32" />
-            <link rel="apple-touch-icon" href="{{ url('theme://favicon.png') }}">
-            <link rel="canonical" href="{{ page.url(true, true) }}" />
-            <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        {% include 'partials/metadata.html.twig' %}
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" href="{{ url('theme://favicon.png') }}" sizes="32X32"/>
+        <link rel="apple-touch-icon" href="{{ url('theme://favicon.png') }}">
+        <link rel="canonical" href="{{ page.url(true, true) }}"/>
+        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
-            {% block stylesheets %}
-                {% do assets.addCss('theme://build/css/simplicity.min.css', 1) %}
-            {% endblock %}
-            {{ assets.css() }}
-        {% endblock head %}
-
-    </head>
-    <body>
-        <div class="site-wrapper">
-        {% block header %}
-            {% include 'partials/header.html.twig' %}
+        {% block stylesheets %}
+            {% do assets.addCss('theme://build/css/simplicity.min.css', 1) %}
         {% endblock %}
+        {{ assets.css() | raw }}
+    {% endblock head %}
 
-        <div class="site-content container">
-            <div class="row">
-                {% if page.template() == 'home' %}
-                    <main class="col-md-8 col-sm-12 col-xs-12 main">
-                        {% block main %}{% endblock %}
-                    </main>
-                    <aside class="col-md-4 col-sm-12 col-xs-12 sidebar">
-                        {% block aside %}{% endblock %}
-                    </aside>
-                {% else %}
-                    <main class="col-12">
-                        {% block content %}{% endblock %}
-                    </main>
-                {% endif %}
+</head>
+<body>
+{% if theme_config.menu %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{{ home_url }}">{{ site.title|e('html') }}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                {% block header_navigation %}
+                    {% include 'partials/navigation.html.twig' %}
+                {% endblock %}
             </div>
         </div>
-        {% block footer %}
-            {%  include 'partials/footer.html.twig' %}
-        {% endblock %}
+    </nav>
+{% endif %}
 
+<div class="site-wrapper">
+    {% block header %}
+        {% include 'partials/header.html.twig' %}
+    {% endblock %}
+
+    <div class="site-content container">
+        <div class="row">
+            {% if page.template() == 'home' %}
+                <main class="col-md-8 col-sm-12 col-xs-12 main">
+                    {% block main %}{% endblock %}
+                </main>
+                <aside class="col-md-4 col-sm-12 col-xs-12 sidebar">
+                    {% block aside %}{% endblock %}
+                </aside>
+            {% else %}
+                <main class="col-12">
+                    {% block content %}{% endblock %}
+                </main>
+            {% endif %}
         </div>
+    </div>
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
+
+</div>
 
 
-        {% block javascripts %}
-            {% do assets.addJs('theme://build/js/simplicity.core.min.js',100) %}
-            {% do assets.addJs('theme://build/js/simplicity.app.min.js',80) %}
-        {% endblock %}
-        {{ assets.js() }}
-    </body>
+{% block javascripts %}
+    {% do assets.addJs('theme://build/js/simplicity.core.min.js',100) %}
+    {% do assets.addJs('theme://build/js/simplicity.app.min.js',80) %}
+{% endblock %}
+{{ assets.js() | raw }}
+</body>
 </html>

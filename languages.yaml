@@ -106,10 +106,10 @@ en:
   THEME_SIMPLICITY:
     FRONTEND:
       PROJEKTLINK: "read more"
-      OTHERPROJEKT: "Show more entries"
+      OTHERPROJEKT: "Show more projects"
       CREATED: "Created"
       BACK: "back"
-      PREVIEW_IMAGE: "Preview inage"
+      PREVIEW_IMAGE: "Preview image"
     ADMIN:
       TAB:
         CONTENT: "Content"
@@ -132,7 +132,7 @@ en:
               LABEL: "duration of education"
               DESCRIPTION: "Example: `2018-2019`"
         SHOWTITLE:
-          LABEL: "Show title?"
+          LABEL: "Show title"
           OPTIONS:
             0: "No"
             1: "Yes"

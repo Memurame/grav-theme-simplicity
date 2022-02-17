@@ -3,10 +3,10 @@
     <div class="content">
         {% for exp in page.header.experience %}
             <div>
-                <strong class="title">{{ exp.job }}</strong> - <span class="subtitle">{{ exp.company }} <small>({{ exp.date }})</small></span>
+                <strong class="title">{{ exp.job }}</strong> -
+                <span class="subtitle">{{ exp.company }} <small>({{ exp.date }})</small></span>
                 <p>{{ exp.text }}</p>
             </div>
         {% endfor %}
     </div>
-
 </article>

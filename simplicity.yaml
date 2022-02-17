@@ -1,13 +1,7 @@
 enabled: true
 header:
-  name: 'Hans Müller'
-  subtitle: Web-Developer
-  social:
-    github: 'https://github.com/mueller'
-    facebook: 'https://facebook.com'
-    twitter: 'https://twitter.com'
-    linkedin: 'https://linkedin.com'
-    google: 'https://google.com'
+  name: 'John Doe'
+  subtitle: 'Web Developer'
   image:
     user/themes/simplicity/images/custom/default_avatar.png:
       name: default_avatar.png

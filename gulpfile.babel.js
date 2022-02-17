@@ -5,7 +5,7 @@ import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import cleanCSS from 'gulp-clean-css';
 import header from 'gulp-header';
-import sass from 'gulp-sass';
+//import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import del from 'del';
 import strip from 'gulp-strip-comments';
@@ -13,6 +13,8 @@ import webpack from 'webpack';
 import {VueLoaderPlugin} from 'vue-loader';
 import gulpWebpack from 'webpack-stream';
 import named from 'vinyl-named';
+const sass = require('gulp-sass')(require('sass'));
+
 
 
 const webpackOptions = {
@@ -147,7 +149,7 @@ const dependencies = {
     },
     lightgallery: {
       base: path.src.core.js + '/lightgallery.js',
-      src: 'node_modules/lightgallery/dist/js/lightgallery.js',
+      src: 'node_modules/lightgallery/dist/js/lightgallery.min.js',
       dest: path.src.core.js
     },
     sharer: {
