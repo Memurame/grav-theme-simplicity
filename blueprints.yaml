@@ -18,9 +18,9 @@ dependencies:
 form:
   validation: loose
   fields:
-    menu:
+    navigation:
       type: toggle
-      label: Menu
+      label: Navigation
       highlight: 1
       default: 0
       options:
@@ -28,6 +28,12 @@ form:
         0: Disabled
       validate:
         type: bool
+    copyright:
+      type: text
+      label: Copyright
+      default: "Simplicity"
+      validate:
+        required: true
     tabs:
       type: tabs
       active: 1
