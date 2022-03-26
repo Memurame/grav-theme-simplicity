@@ -2,7 +2,9 @@
     <div class="header-container container">
         <div class="header-profileimage">
             {% set image = theme_config.header.image | first %}
-            <a href="{{ home_url }}"><div style="background-image: url('{{ theme_url }}/images/custom/{{ image.name }}')"></div></a>
+            <a href="{{ home_url }}">
+                <div style="background-image: url('{{ theme_url }}/images/custom/{{ image.name }}')"></div>
+            </a>
         </div>
         <div class="header-info">
             {% if page.template == 'home' %}
@@ -15,22 +17,30 @@
             <div class="header-social">
                 <ul class="sociallinks">
                     {% if  theme_config.header.social.twitter %}
-                        <li><a href="{{ theme_config.header.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li>
+                            <a href="{{ theme_config.header.social.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
                     {% endif %}
                     {% if  theme_config.header.social.google %}
-                        <li><a href="{{ theme_config.header.social.google }}" target="_blank"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li>
+                            <a href="{{ theme_config.header.social.google }}" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
                     {% endif %}
                     {% if  theme_config.header.social.linkedin %}
-                        <li><a href="{{ theme_config.header.social.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li>
+                            <a href="{{ theme_config.header.social.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
                     {% endif %}
                     {% if  theme_config.header.social.github %}
-                        <li><a href="{{ theme_config.header.social.github }}" target="_blank"><i class="fab fa-github-alt"></i></a></li>
+                        <li>
+                            <a href="{{ theme_config.header.social.github }}" target="_blank"><i class="fab fa-github-alt"></i></a>
+                        </li>
                     {% endif %}
                     {% if  theme_config.header.social.facebook %}
-                        <li><a href="{{ theme_config.header.social.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li>
+                            <a href="{{ theme_config.header.social.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
                     {% endif %}
-
-
                 </ul>
             </div>
         </div>

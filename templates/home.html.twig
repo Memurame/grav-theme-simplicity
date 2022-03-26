@@ -1,11 +1,11 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block main %}
-  {% for module in page.collection() %}
-      {% if module.header.position == 'main' %}
-        {{ module.content }}
-      {% endif %}
-  {% endfor %}
+    {% for module in page.collection() %}
+        {% if module.header.position == 'main' %}
+            {{ module.content | raw }}
+        {% endif %}
+    {% endfor %}
 
 {% endblock %}
 
@@ -13,7 +13,7 @@
 
     {% for module in page.collection() %}
         {% if module.header.position == 'sidebar' %}
-            {{ module.content }}
+            {{ module.content | raw }}
         {% endif %}
     {% endfor %}
 

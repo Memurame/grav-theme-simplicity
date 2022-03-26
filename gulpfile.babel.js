@@ -5,7 +5,8 @@ import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import cleanCSS from 'gulp-clean-css';
 import header from 'gulp-header';
-import sass from 'gulp-sass';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import del from 'del';
 import strip from 'gulp-strip-comments';
@@ -13,6 +14,8 @@ import webpack from 'webpack';
 import {VueLoaderPlugin} from 'vue-loader';
 import gulpWebpack from 'webpack-stream';
 import named from 'vinyl-named';
+const sass = gulpSass(dartSass);
+
 
 
 const webpackOptions = {
@@ -77,7 +80,7 @@ const files = {
       path.src.core.js + 'jquery.min.js',
       path.src.core.js + 'sweetalert2.all.min.js',
       path.src.core.js + 'bootstrap.bundle.min.js',
-      path.src.core.js + 'lightgallery.js',
+      path.src.core.js + 'lightgallery.min.js',
       path.src.core.js + 'isotope.pkgd.js',
       path.src.core.js + 'sharer.min.js'
     ]
@@ -147,7 +150,7 @@ const dependencies = {
     },
     lightgallery: {
       base: path.src.core.js + '/lightgallery.js',
-      src: 'node_modules/lightgallery/dist/js/lightgallery.js',
+      src: 'node_modules/lightgallery/dist/js/lightgallery.min.js',
       dest: path.src.core.js
     },
     sharer: {

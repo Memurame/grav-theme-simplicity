@@ -106,10 +106,10 @@ en:
   THEME_SIMPLICITY:
     FRONTEND:
       PROJEKTLINK: "read more"
-      OTHERPROJEKT: "Show more entries"
+      OTHERPROJEKT: "Show more projects"
       CREATED: "Created"
       BACK: "back"
-      PREVIEW_IMAGE: "Preview inage"
+      PREVIEW_IMAGE: "Preview image"
     ADMIN:
       TAB:
         CONTENT: "Content"
@@ -118,6 +118,8 @@ en:
         SETTINGS: "Settings"
         PREVIEW: "Preview"
         MODULAR: "Modular"
+        PERSON: "Person"
+        SOCIAL: "Social networks"
       FIELDS:
         TITLE:
           LABEL: "Title"
@@ -132,7 +134,7 @@ en:
               LABEL: "duration of education"
               DESCRIPTION: "Example: `2018-2019`"
         SHOWTITLE:
-          LABEL: "Show title?"
+          LABEL: "Show title"
           OPTIONS:
             0: "No"
             1: "Yes"
@@ -182,23 +184,131 @@ en:
         TEXT:
           LABEL: "Text"
         SKILLS:
-          LABEL: "knowledge"
+          LABEL: "Knowledge"
           FIELDS:
             NAME:
-              LABEL: "designation"
+              LABEL: "Description"
             LEVEL:
               LABEL: "Level"
         TAGS:
           LABEL: "Tags"
         PREVIEW_IMAGE:
           LABEL: "Image"
-          DESCRIPTION: "The pictures are reduced in a ratio of 4: 3 and cropped."
+          DESCRIPTION: "The pictures are reduced in a ratio of 4:3 and cropped."
         PREVIEW_TEXT:
           LABEL: "Short description"
         YOUTUBE:
           LABEL: "Enter video ID"
           DESCRIPTION: "Example: `VkvUH8vRQfE`"
-
-
+        NAME:
+          LABEL: "Your name"
+        SUBTITLE:
+          LABEL: "Sub title"
+        PROFILE_IMAGE:
+          LABEL: "Profile image"
+nl:
+  THEME_SIMPLICITY:
+    FRONTEND:
+      PROJEKTLINK: "lees meer"
+      OTHERPROJEKT: "Toon meer projecten"
+      CREATED: "Aangemaakt"
+      BACK: "terug"
+      PREVIEW_IMAGE: "Preview afbeelding"
+    ADMIN:
+      TAB:
+        CONTENT: "Inhoud"
+      SECTION:
+        CONTENT: "Pagina inhoud"
+        SETTINGS: "Instellingen"
+        PREVIEW: "Preview"
+        MODULAR: "Modulair"
+        PERSON: "Persoon"
+        SOCIAL: "Sociale networken"
+      FIELDS:
+        TITLE:
+          LABEL: "Titel"
+        EDUCATION:
+          LABEL: "Onderwijs"
+          FIELDS:
+            NAME:
+              LABEL: "Beschrijving"
+            SCHOOL:
+              LABEL: "School"
+            DATE:
+              LABEL: "tijdspan van opleiding"
+              DESCRIPTION: "Voorbeeld: `2018-2019`"
+        SHOWTITLE:
+          LABEL: "Toon titel"
+          OPTIONS:
+            0: "Nee"
+            1: "Ja"
+        POSITION:
+          LABEL: "Positie van de inhoud"
+          OPTIONS:
+            MAIN: "Main"
+            SIDEBAR: "Sidebar"
+          DESCRIPTION: "Deze instelling is alleen beschikbaar op de Home-pagina. Op alle andere heeft dit geen invloed"
+        REFERENCE:
+          LABEL: "Selecteer invoerlijst"
+        COUNT:
+          LABEL: "Aantal"
+          OPTIONS:
+            2: "De laatste 2 entries"
+            5: "De laatste 5 entries"
+            10: "De laatste 10 entries"
+        LAYOUT:
+          LABEL: "Layout"
+          OPTIONS:
+            1: "Layout 1 (zonder image)"
+            2: "Layout 2 (met image)"
+        SHOWTAGS:
+          LABEL: "Tonen van tags?"
+          OPTIONS:
+            0: "Nee"
+            1: "Ja"
+        SLICE:
+          LABEL: "Tekst beperken tot 180 tekens?"
+          OPTIONS:
+            0: "Nee"
+            1: "Ja"
+        EXPERIENCE:
+          LABEL: "Ervaring"
+          FIELDS:
+            JOB:
+              LABEL: "Job"
+            COMPANY:
+              LABEL: "Bedrijf"
+            DATE:
+              LABEL: "Werk periode"
+              DESCRIPTION: "Voorbeeld: `2018-2019`"
+            TEXT:
+              LABEL: "Beschrijving"
+        GALLERIE:
+          LABEL: "Gallerij"
+        TEXT:
+          LABEL: "Tekst"
+        SKILLS:
+          LABEL: "Kennis"
+          FIELDS:
+            NAME:
+              LABEL: "Beschrijving"
+            LEVEL:
+              LABEL: "Level"
+        TAGS:
+          LABEL: "Tags"
+        PREVIEW_IMAGE:
+          LABEL: "Image"
+          DESCRIPTION: "De foto's zijn verkleind in een verhouding van 4:3 en bijgesneden."
+        PREVIEW_TEXT:
+          LABEL: "Korte beschrijving"
+        YOUTUBE:
+          LABEL: "Geef video ID"
+          DESCRIPTION: "Voorbeeld: `VkvUH8vRQfE`"
+        NAME:
+          LABEL: "Jouw naam"
+        SUBTITLE:
+          LABEL: "Sub titel"
+        PROFILE_IMAGE:
+          LABEL: "Profiel foto"
 
 

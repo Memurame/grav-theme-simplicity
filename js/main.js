@@ -1,6 +1,5 @@
 import Vue from 'vue'
 
-
 $(".gallery").lightGallery();
 
 $(document).ready(function() {
